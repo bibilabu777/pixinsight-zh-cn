@@ -1,0 +1,184 @@
+﻿PixInsight 中文（外挂式简体中文汉化） 使用说明
+版本：1.2.1（2026-11-22）　词典：24,603 条　适配：PixInsight 1.9.6 / Windows Qt6 x64
+项目主页：https://github.com/bibilabu777/pixinsight-zh-cn
+测试状态：目前仅在 1.9.6 与 1.9.5（Windows Qt6 x64）实测通过；其他版本请自行测试。
+====================================================================
+
+
+一、怎么用（一分钟）
+--------------------
+安装后桌面会出现「PixInsight 中文」快捷方式，双击即可。
+
+中文界面：双击桌面「PixInsight 中文」
+          或运行   <PI根目录>\zh_cn\pi_zh_loader.exe
+
+英文原版：直接运行原版 <PI根目录>\bin\PixInsight.exe
+
+（<PI根目录> 指 PixInsight 的安装目录，即包含 bin\PixInsight.exe 的那一层。）
+
+汉化只在进程运行时生效，退出程序即恢复原状。
+原始 PixInsight.exe 与所有模块 DLL 均未被修改，
+官方升级、文件校验、重装都不受影响。
+
+
+二、启动参数
+------------
+--root <目录>  指定 PixInsight 安装目录（也可用环境变量 PI_ZH_ROOT）
+--no-doc       不切换 PJSR 帮助文档语言
+--no-wf        不自动加载 zh_cn\workflow.xpsm
+--help         显示帮助
+其余参数       原样透传给 PixInsight
+
+默认按 zh_cn 的上一级目录推导 PI 根目录；同一台机器装多个 PI 版本时，
+各版本根目录下各放一份 zh_cn 即可，互不干扰，无需重新编译。
+
+多开与残留：
+· 程序已在运行时再次双击，不会重复开窗口，而是把已有窗口切到前台。
+· 正在启动中（无窗口、运行不足 150 秒）不会被误杀，启动器会等待。
+· 上次异常退出留下的无窗口残留进程（超过 150 秒）会被自动清理后重启。
+
+
+三、文件构成（<PI根目录>\zh_cn\）
+--------------------------------
+pi_zh_loader.exe   启动器：启动 PixInsight 并注入汉化模块
+pi_zh.dll          汉化模块：运行时替换界面文本
+zh_cn.tsv          外置词典：英文原文 <TAB> 中文译文（24,603 条，约 5.1 MB）
+pi_zh.log          运行日志（注入结果、词典加载条数、自检）
+loader.log         启动日志（进程、注入、工作流）
+使用说明.txt       本文件
+*.bak-*            历次改动前的自动备份，可保留也可删除
+
+
+四、原理与安全边界
+------------------
+启动器以挂起方式创建 PixInsight 进程，把 pi_zh.dll 注入进去；
+DLL 挂钩 Qt6 的文本显示接口，在绘制/赋值瞬间把英文换成中文。
+
+安全边界：
+· 只改内存里显示的字，不改磁盘上的程序文件。
+· 不涉及授权、序列号、激活、试用或任何形式的破解——只做显示层翻译。
+· 本包不包含、不链接、不分发 PixInsight 本体、安装包、官方 DLL 或官方文档。
+· 唯一在 zh_cn 之外的动作：帮助文档 doc\docs\PJSR\PJSR.html 的
+  语言切换（官方原文保存为 PJSR.html.en，汉化版为 .zh）。
+  仅当安装目录里自备了 PJSR.html.zh 才会发生，本包不附带该文件；
+  不需要可用 --no-doc 关闭。
+
+使用前提：请确认你拥有合法的 PixInsight 授权；本项目面向正版用户，
+界面翻译仅为本地化便利，请同时遵守 PixInsight 的最终用户许可协议。
+
+
+五、当前覆盖范围
+----------------
+· 主界面：主菜单及全部子菜单、工具栏、状态栏、各面板标题
+· 进程对话框：全部 C++ 进程的参数标签、分组框、按钮、单位说明、悬浮提示
+· 第三方模块：BXT / NXT / SXT 的参数、分组、按钮与悬浮长说明
+· 脚本：476 个脚本目录的界面文案与「使用说明 / 介绍 / 帮助」长段文本
+· 对话框：打开/保存/另存、首选项、项目元数据、各类确认与警告提示
+· 悬浮提示：富文本长说明、带路径/数量/参数值的动态拼接提示
+· Qt 标准件：标准按钮（OK/Cancel/Yes/No/Close/Save/Open…）、
+  右键菜单（Cut/Copy/Paste/Select All/New Folder…），含带 & 助记符的形式
+· 细节：文件资源管理器右键菜单、CSS 颜色名、PJSR 对象名、工作流图标名
+
+
+六、仍然保留英文的地方（正常现象）
+----------------------------------
+1. 进程控制台的运行日志与报错——程序输出，不是界面文字。
+2. 磁盘上真实的文件名、文件夹名、路径、盘符——翻译会与实际路径不一致。
+3. 作者名、网址、版权声明、许可文本。
+4. 标识符类：工作流 icon id、API/枚举标识符、格式标记（XISF/FITS）、
+   设备与滤镜型号（Canon/Nikon/Askar/Astrodon）、系统字体名。
+   这些改了会与程序内部标识或实际硬件不一致，故保留原样。
+5. 文档浏览器正文由 QtWebEngine 内核渲染，绘制层钩子够不到；
+   仅 PJSR.html 支持磁盘语言切换，且需你自备 PJSR.html.zh，
+   其余官方文档仍为英文。
+
+
+七、出问题怎么查
+----------------
+先看 <PI根目录>\zh_cn\pi_zh.log，正常应有：
+
+    dict loaded: 21901 entries, 0 failed, skipped_long=0
+    round0 patched 42
+    selftest ... hit=1
+
+（加载数通常比词典行数少 1，这是已知的固定差异，不是丢词。
+  只要 failed=0 且 skipped_long=0 就正常。）
+
+对照排查：
+· 界面全英文
+  → 是否直接开了 PixInsight.exe；请改用 pi_zh_loader.exe 启动。
+· 弹窗提示「汉化模块注入失败，将以英文原版启动」
+  → 看 loader.log 的「注入结果=0」；多为安全软件拦截 DLL 注入，
+    把 <PI根目录>\zh_cn 加入白名单后重试。
+· 中文显示成方块/问号
+  → zh_cn.tsv 编码被改坏了。必须是 UTF-8（带 BOM）、CRLF、
+    原文与译文之间一个制表符。可从最近的 .bak-* 还原。
+· 文档面板白屏
+  → 启动器已设置禁用 GPU 合成；仍白屏可清理 QtWebEngine 缓存目录后重试。
+· 双击没反应
+  → 多半是已有实例在前台；或残留进程尚未超过 150 秒判定阈值。
+· 官方升级之后
+  → 汉化无需重装，照常用 loader 启动。
+
+
+八、手动改词条 / 自定义
+-----------------------
+用 Notepad++ 或 VSCode 打开 zh_cn.tsv（4 MB，系统记事本会明显卡顿）。
+格式为「英文原文 <TAB> 中文译文」，一行一条：
+
+    File	文件
+    Process Console	进程控制台
+
+注意：
+· 中间的制表符不能换成空格。
+· 不要在同一条里放真实换行；需要换行写 \n（两个字符）。
+· 保存为 UTF-8（带 BOM）、CRLF 换行。
+· 改完重启中文版生效；想恢复某条的英文，删掉该行即可。
+
+
+九、备份、升级与卸载
+--------------------
+备份：整个 <PI根目录>\zh_cn 文件夹复制一份即可（含词典、程序、说明）。
+升级：PixInsight 官方升级不影响本汉化；换大版本时把 zh_cn 整个复制过去即可。
+卸载：删除整个 <PI根目录>\zh_cn 文件夹，再删掉桌面快捷方式即可。
+      PixInsight 本体没有被改动过，删除后就是原版。
+
+
+十、更新日志
+------------
+2026-11-22  发布仓库 v1.2.1
+  · 仓库地址迁移到 https://github.com/bibilabu777/pixinsight-zh-cn
+  · 本版不含程序与词典改动，功能与 v1.2.0 完全一致，仅更新文档与发布地址。
+2026-11-22  补齐 PI 原生模块 tooltip（v1.2.0，词典 24,603 条）
+  · 参数悬停提示（tooltip）汉化从 83.6% 提升到 99.90%：
+    2,076 条富文本提示中已汉化 2,074 条。
+  · 本轮完成 23 个模块，全部从零覆盖到 100%：
+    MultiscaleProcessing、ColorCalibration、EphemerisGeneration、SubframeSelector、
+    BackgroundModelization、FastIntegration、INDIClient、Debayer、CometAlignment、
+    Compatibility、GeneralizedHyperbolicStretch、Image(DynamicPSF)、Convolution、
+    FITS、XISF、IntensityTransformations、APASS、Deconvolution、CosmeticCorrection、
+    MachineLearning、NSGXnml、RAW、MultiscaleAdaptiveStretch。
+  · 共新增 338 条词条。
+  · 剩余 2 条不译，属合理例外：一条含示例文件名（LIGHT_B2x2_E300.00_002.fits），
+    一条是表达式用的属性标识符列表（Altitude | Azimuth | FWHM | …），
+    译成中文会让用户无法书写审批/加权表达式。
+2026-11-22  补充脚本界面汉化（词典 24,181 条）
+  · 修正 SetiAstro > Cosmic Clarity - SASpro 菜单项不翻译：词典中该条原为
+    「英文=英文」自映射占位，按先进先出规则挡住了后加的译文，已就地改写。
+  · 新增 39 条第三方脚本界面文案：SetiAstro 系列（Cosmic Clarity / Dark Star /
+    SuperRes / Satellite / Denoise、AstroDepth、AstroMark、AutoDBE、FAME、
+    MaskGen、FindBackground、Star Spike、Whats In My Image、dnaLinearFit 等）、
+    ContinuumSubtraction、NBExtractPI、NB to RGB Stars、Perfect Palette Picker、
+    Statistical Stretch 的说明段落、提示与消息框。
+  · 补 8 个「基础名」词条（Preview Zoom Level / Select AI Model / Pixel Value /
+    Search routine / RA / pa / min / max），使「名称: 数值」型标签经尾部冒号
+    回退后可整体译出。
+  · 清理 6 条尾随空格的冗余键（加载时会被裁空格，永远查不到）；
+    对齐 2 条译文的分行数。
+2026-11-22  打包发布 v1.1.0
+  · 图形化安装器；去掉缺词采集工具，仅保留汉化功能。
+2026-11-21  全量翻译核查（词典 24,181 条）
+  · 逐行结构校验：制表符数、空键空值、重复键、BOM、CRLF 全部 0 异常。
+  · 术语统一：重定标→重缩放、遮罩→蒙版、定标→校准、去卷积→反卷积、
+    图像合成语境的「积分/整合」→叠加、未筛选/去滤色→反滤色、抖散→drizzle。
+  · 修正同源译法分裂与误译若干。
