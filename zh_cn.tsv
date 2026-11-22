@@ -988,7 +988,7 @@ StarReduction	星点缩减
 StarTrailsBlending	星轨合成
 SubstituteWithPreview	用预览替换
 Swap channels	交换通道
-TypeCat	TypeCat
+TypeCat	对象类型星表
 VaryParams	参数变化
 ViewIdReplace	视图标识替换
 WeightsOptimizer	权重优化器
@@ -2202,7 +2202,7 @@ Draw Ellipse	绘制椭圆
 * Not used *	* 未使用 *
 Target Files	目标文件
 Use Automask	使用自动蒙版
-Wide - 90deg	广角 - 90 度
+Wide - 90deg	宽 - 90 度
 Source view:	源视图：
 Show reticle	显示十字线
 Readout size	读数尺寸
@@ -2421,7 +2421,7 @@ DeBayer Kernel	去拜耳核
 CFA X-Offset :	CFA X 偏移：
 CFA Y-Offset :	CFA Y 偏移：
 CFA Parameters	CFA 参数
-Narrow - 30deg	窄角 - 30 度
+Narrow - 30deg	窄 - 30 度
 Transformation	变换
 Preview height	预览高度
 Preview cross:	预览十字：
@@ -2810,7 +2810,7 @@ Copy Center RA/DEC	复制中心赤经/赤纬
 Output extension :	输出扩展名：
 DeBayer Parameters	去拜耳参数
 Protection method:	保护方法：
-UltraWide - 120deg	超广角 - 120 度
+UltraWide - 120deg	超宽 - 120 度
 Layer coefficient:	层系数：
 Colourising images	正在着色图像
 Delete description	删除描述
@@ -9053,7 +9053,6 @@ Extract/delete the active (first) alpha channel only.	仅提取/删除活动的�
 Extract/delete all existing alpha channels.	提取/删除所有现有的 alpha 通道。
 Empty channel list	通道列表为空
 Empty channel list!	通道列表为空！
-Invalid alpha channel index: 	无效的 alpha 通道索引： 
 No channel selected for extraction	未选择要提取的通道
 No channel selected for combination	未选择要合成的通道
 lightness	明度
@@ -20547,11 +20546,11 @@ Rejection scale:	剔除尺度:
 Identifier prefix:	标识符前缀:
 Fringe count scale:	条纹计数尺度:
 Generate views	生成视图
- L-band 546.0 nm	L 波段 546.0 nm
- R-band 656.0 nm	R 波段 656.0 nm
- G-band 526.0 nm	G 波段 526.0 nm
- B-band 456.0 nm	B 波段 456.0 nm
- Scale rejection	尺度剔除
+L-band 546.0 nm	L 波段 546.0 nm
+R-band 656.0 nm	R 波段 656.0 nm
+G-band 526.0 nm	G 波段 526.0 nm
+B-band 456.0 nm	B 波段 456.0 nm
+Scale rejection	尺度剔除
 Add Frames	添加帧
 Full path	完整路径
 Wavefront estimate	波前估计
@@ -20566,11 +20565,11 @@ Sort rows by:	排序方式:
 Exposure estimation	曝光估计
 Defocus exposure:	离焦曝光:
 Observation bandwidth:	观测带宽:
- ~300 nm L-bandwidth	~300 nm L 带宽
+~300 nm L-bandwidth	~300 nm L 带宽
 Defocus diameter:	离焦直径:
 Star magnitude:	星等:
 Exposure measurement	曝光测量
- ~50 to 100 nm RGB-bandwidth	~50 至 100 nm RGB 带宽
+~50 to 100 nm RGB-bandwidth	~50 至 100 nm RGB 带宽
 Zernike aberration	Zernike 像差
 1 : 1 px	1 : 1 像素
 2 : 2 px	2 : 2 像素
@@ -20698,8 +20697,8 @@ AstroMark - Signature and Insert Adder	AstroMark - 签名与插入件添加器
 All Channels	全部通道
 Working Image: Image11	工作图像: Image11
 Prior to Running the script ensure:	运行本脚本前请确保:
- -Gradients Removed	 -梯度已移除
- -Stacking Artifacts cropped out	 -叠加伪影已裁掉
+-Gradients Removed	 -梯度已移除
+-Stacking Artifacts cropped out	 -叠加伪影已裁掉
 Red (or RGB):	红色 (或 RGB):
 Continuum Subtraction Utility Script	连续谱扣除工具 脚本
 Auto Detect	自动检测
@@ -20708,16 +20707,16 @@ Spacing rate: 	间距比例:
 Search grid width: 	搜索网格宽度: 
 Number of starting points: 	起始点数量: 
 1. Add narrowband images or OSC camera	1. 添加窄带图像或 OSC 相机
- images.You can use both OSC dropdowns	 图像。两个 OSC 下拉框都可使用
- images are linear.	 图像为线性。
+images.You can use both OSC dropdowns	 图像。两个 OSC 下拉框都可使用
+images are linear.	 图像为线性。
 6. Click on a palette from the preview	6. 点击预览中的调色板
- selection to generate that palette. 	 选项以生成该调色板。 
+selection to generate that palette. 	 选项以生成该调色板。 
 Dynamic Inverse	动态反相
 Images to save  (2 open):	待保存的图像  (2 个已打开):
 6248 × 4176  color	6248 × 4176  彩色
 3856 × 2180  color	3856 × 2180  彩色
 Image ID	图像 ID
- of a Stars Only Image	 仅星点图像
+of a Stars Only Image	 仅星点图像
 Decimal Degrees	十进制度
 Orientation: -	取向: -
 Narrowband Red	窄带红
@@ -20727,7 +20726,7 @@ red channel view:	红色通道视图:
 Narrowband view or	窄带视图或
 Ha view:	Ha 视图:
 Min Luminance (Flood Fill):	最低亮度 (泛洪填充):
- in the image to pick this value.	 在图像中拾取该值。
+in the image to pick this value.	 在图像中拾取该值。
 Low Saturation	低饱和度
 High Saturation	高饱和度
 Imported Mask	导入的蒙版
@@ -20782,7 +20781,6 @@ See the help for more details.	详见帮助。
 Weights Optimizer	权重优化器
 PSF Signal	PSF 信号
 Formula: PSFSignal	公式: PSFSignal
-# | Session	# | 会话
 GAIN %	增益 %
 JavaScript files (*.js)	JavaScript 文件 (*.js)
 PixInsight shell script files (*.scp)	PixInsight 外壳脚本文件 (*.scp)
@@ -20916,7 +20914,7 @@ The files are in the order of the input (do a Refresh if you sorted the input),	
 This matters for the &count; and &rank; keywords.	这会影响 &count; 和 &rank; 关键字。
 Load the checked files and save them in the output directory.	载入勾选的文件并保存到输出目录。
 BEWARE: Not supported for files containing multiple HDU (multiple images).	注意: 不支持包含多个 HDU（多幅图像）的文件。
-        Data will be interpreted by PI, PEDESTAL may become irrelevant or ignored.	        数据将由 PI 解释，PEDESTAL 可能变得无关或被忽略。
+Data will be interpreted by PI, PEDESTAL may become irrelevant or ignored.	        数据将由 PI 解释，PEDESTAL 可能变得无关或被忽略。
 Add ORIGFILE keyword with original file name if not already present.	若尚不存在，则添加包含原始文件名的 ORIGFILE 关键字。
 <p><b>StarTrailsBlending 2.0.0</b> &mdash; Blending for star-trails images.</p>	<p><b>StarTrailsBlending 2.0.0</b> &mdash; 星轨图像混合。</p>
 <p><b>Substitute with Preview v1.00</b> &mdash; A script for preview substitution.</p>	<p><b>Substitute with Preview v1.00</b> &mdash; 用于预览替换的脚本。</p>
@@ -24602,3 +24600,1218 @@ max	最大
 <p>Shrink font.</p>	<p>缩小字体。</p>
 <p>Reset sample-free scale to its default.</p>	<p>把无样本尺度重置为默认值。</p>
 <p>Number of wavelet layers used for structure detection.</p><p>With more wavelet layers, larger stars and significant structures will be detected and used for relative scale evaluation.</p>	<p>用于结构检测的小波层数。</p><p>小波层越多，就能检测到更大的恒星与重要结构，并用于相对尺度评估。</p>
+Script: Cannot execute instance in the global context.\nReason: This Script instance refers to a nonexistent script file.	脚本：无法在全局上下文中执行实例。\n原因：此脚本实例引用的脚本文件不存在。
+Script: Cannot execute instance in the global context.	脚本：无法在全局上下文中执行实例。
+Reason: This Script instance refers to a nonexistent script file.	原因：此脚本实例引用的脚本文件不存在。
+This Script instance refers to a nonexistent script file.	此脚本实例引用的脚本文件不存在。
+Start hue:	起始色相:
+End hue:	结束色相:
+Min chrominance:	最小色度:
+Max chrominance:	最大色度:
+Min lightness:	最小明度:
+Max lightness:	最大明度:
+Min intensity:	最小强度:
+Max intensity:	最大强度:
+Mask strength:	蒙版强度:
+Mask blur:	蒙版模糊:
+Mask type:	蒙版类型:
+Hue wheel	色相轮
+<p>Start of the Colour range specified as a Hue value between 0 and 360 degrees.</p>	<p>颜色范围的起点，以 0 到 360 度之间的色相值表示。</p>
+<p>End of the Colour range specified as a Hue value between 0 and 360 degrees.</p>	<p>颜色范围的终点，以 0 到 360 度之间的色相值表示。</p>
+<p>Min chrominance value to be included in mask. Chrominance is the c* component of the CIE L*c*h* colour space.</p>	<p>纳入蒙版的最小色度值。色度是 CIE L*c*h* 色彩空间的 c* 分量。</p>
+<p>Max chrominance value to be included in mask. Chrominance is the c* component of the CIE L*c*h* colour space.</p>	<p>纳入蒙版的最大色度值。色度是 CIE L*c*h* 色彩空间的 c* 分量。</p>
+<p>Min lightness value to be included in mask. Lightness is the L* component of the CIE L*c*h* colour space.</p>	<p>纳入蒙版的最小明度值。明度是 CIE L*c*h* 色彩空间的 L* 分量。</p>
+<p>Max lightness value to be included in mask. Lightness is the L* component of the CIE L*c*h* colour space.</p>	<p>纳入蒙版的最大明度值。明度是 CIE L*c*h* 色彩空间的 L* 分量。</p>
+<p>Min intensity value to be included in mask. Intensity is the I component of the HSI colour space.</p>	<p>纳入蒙版的最小强度值。强度是 HSI 色彩空间的 I 分量。</p>
+<p>Max intensity value to be included in mask. Intensity is the I component of the HSI colour space.</p>	<p>纳入蒙版的最大强度值。强度是 HSI 色彩空间的 I 分量。</p>
+<p>Mask strength controls how strongly hues away from the midpoint of the selected range are included in the mask.</p>	<p>蒙版强度控制离所选范围中点越远的色相被纳入蒙版的程度。</p>
+<p>Number of wavelet layers that will be removed to blur the mask.</p>	<p>为柔化蒙版而去除的小波层数。</p>
+<p>Set the type of mask to create.</p>	<p>设置要生成的蒙版类型。</p>
+<p><b>Preset Buttons</b></p>	<p><b>预置颜色按钮</b></p>
+<p><b>Preset Range</b></p>	<p><b>预置范围</b></p>
+Centre colour range on red.	把颜色范围居中于红色。
+Centre colour range on yellow.	把颜色范围居中于黄色。
+Centre colour range on green.	把颜色范围居中于绿色。
+Centre colour range on cyan.	把颜色范围居中于青色。
+Centre colour range on blue.	把颜色范围居中于蓝色。
+Centre colour range on magenta.	把颜色范围居中于洋红。
+<p>Hue range in degrees used when you press any of the above Colour preset buttons. By default, 60-degree range is used, but can be changed to wider or lower range. Start and end hue values can be fine-tuned manually with the help of appropriate controls</p>	<p>按下上方任一颜色预置按钮时使用的色相范围（以度为单位）。默认为 60 度，也可改成更宽或更窄的范围。起止色相值当然也能用相应控件手动微调。</p>
+Centre hue range on readout hue selected from image or colour wheel.	以从图像或色相轮选取的读数色相为中心设置色相范围。
+Set start hue equal to readout hue selected from image or colour wheel.	把起始色相设为从图像或色相轮选取的读数色相。
+Set end hue equal to readout hue selected from image or colour wheel.	把结束色相设为从图像或色相轮选取的读数色相。
+<p>Reset readout</p>	<p>重置读数</p>
+Reset the readout hue.	重置读数色相。
+<p>Click image in readout mode or shift click hue wheel to set readout hue</p>	<p>在读数模式下点击图像，或按住 Shift 点击色相轮，即可设定读数色相。</p>
+<p>Set hue range</p>	<p>设置色相范围</p>
+<p>Set start hue</p>	<p>设置起始色相</p>
+<p>Set end hue</p>	<p>设置结束色相</p>
+Deleting colour:	正在删除颜色：
+Save failure - duplicate name:	保存失败 - 名称重复：
+Highlight protection:	高光保护：
+Surface only	仅日面
+Surface and prominence	日面与日珥
+Prominence only	仅日珥
+Solar rim:	日面边缘：
+Whitepoint:	白场：
+Use experimental FDM	使用实验性 FDM
+Boost amount:	增强量：
+Prominence boost	日珥增强
+Contrast limit:	对比度限制：
+Surface and prom	日面与日珥
+Show contrast mask	显示对比度蒙版
+Blur:	模糊：
+Contrast mask	对比度蒙版
+Histogram equalisation	直方图均衡
+Contrast enhancement	对比度增强
+Use prominence mask	使用日珥蒙版
+Contrast boost:	对比度增强量：
+Highlight contrast:	高光对比度：
+Available colours:	可用颜色：
+Colour name:	颜色名称：
+Colour management	色彩管理
+Show sharpening mask	显示锐化蒙版
+Sharpen mask	锐化蒙版
+Sharpen kernel:	锐化核半径：
+Sharpen boost:	锐化强度：
+Denoise kernel:	降噪核半径：
+Denoise amount:	降噪量：
+Sharpening	锐化
+Testing	测试
+FD Mask	FD 蒙版
+FD Mask - Prom boost E2	FD 蒙版 - 日珥增强 E2
+FD Mask - after Prom boost	FD 蒙版 - 日珥增强后
+FD Mask - Colourise E9	FD 蒙版 - 上色 E9
+Uncropped FD Mask	未裁剪 FD 蒙版
+Uncropped FDM - Prom boost E2	未裁剪 FDM - 日珥增强 E2
+Blend mask - Prom boost E3	混合蒙版 - 日珥增强 E3
+<p>Select your image type. Example: If the image is only of the solar surface, select 'Surface Only' mode.</p>	<p>选择图像类型。例如：若图像只包含日面，请选择「仅日面」模式。</p>
+<p>Inverts the image.</p>	<p>将图像反相。</p>
+<p>Enter the pixel value at the visible edge of the solar surface.</p>	<p>输入日面可见边缘处的像素值。</p>
+<p>Set the blackpoint value for the image.</p>	<p>设置图像的黑场值。</p>
+<p>Set blackpoint to minimum sample value in the current active image. This is just an aid; you will most likely increase your blackpoint value from this point to remove low level unwanted signal. If there is no current active image this will set the blackpoint to zero.</p>	<p>将黑场设为当前活动图像的最小采样值。这只是一个辅助起点；通常还需要在此基础上继续提高黑场，以去除低强度无用信号。若当前没有活动图像，则黑场设为零。</p>
+<p>Set the whitepoint value for the image.</p>	<p>设置图像的白场值。</p>
+<p>Set whitepoint to maximum sample value in the current active image. This is just an aid; you will most likely increase your whitepoint value from this point to avoid clipping. If there is no current active image this will set the whitepoint to 1.0.</p>	<p>将白场设为当前活动图像的最大采样值。这只是一个辅助起点；通常还需要在此基础上继续调整白场以避免削顶。若当前没有活动图像，则白场设为 1.0。</p>
+<p>Enter the amount of boost you want to apply to the prominence areas of the image (Range: 0 to 1).</p>	<p>输入要对图像日珥区域施加的增强量（范围：0 到 1）。</p>
+<p>This feature uses a mask to help blend in the original image to that of a prominence boosted image, thus giving the image a more natural round shape but having boosted prominences.</p>	<p>此功能使用蒙版把原图与日珥增强后的图像混合起来，使日面轮廓保持自然圆整，同时日珥得到增强。</p>
+<p>Enter the amount of highlight protection you want to apply to the highlights in the prominence areas of the image (Range: 0 to 0.5).</p>	<p>输入要对日珥区域高光施加的高光保护量（范围：0 到 0.5）。</p>
+<p>The radius (in pixels) of the circular kernel in which the local histogram is evaluated. For most images, values in the range 50 to 200 give the best result.</p>	<p>计算局部直方图所用圆形核的半径（单位：像素）。多数图像在 50 到 200 之间效果最好。</p>
+<p>Maximum allowed slope of the local contrast transfer function. Value of 1 does not change the original image at all. Higher values make the effect stronger. If values are too high the noise in the image can be emphasised. Typical values are 1.5 to 3.</p>	<p>局部对比传递函数允许的最大斜率。取 1 时完全不改变原图；取值越大效果越强。取值过高会使图像噪点更加明显，典型值为 1.5 到 3。</p>
+<p>Amount of the local histogram equalisation. This parameter is used to blend the processed image with the original one. For example a value of 0.75 will blend 25% of the original image with 75% of the processed image.</p>	<p>局部直方图均衡的作用量。该参数用于把处理后的图像与原图混合。例如取 0.75 表示 25% 原图加 75% 处理后图像。</p>
+<p>This parameter controls the amount of local contrast to be added to your image.</p>	<p>此参数控制给图像增加的局部对比量。</p>
+<p>There are 2 masking options:<br><br><b>1) Surface and prom mask</b>, which will mask areas outside the surface and prominence areas i.e. background;<br><br><b>2) Surface only mask</b>, which will mask out areas outside the solar surface only, so that contrast adjustments are not performed on the prominences or background.</p>	<p>有两种蒙版方式：<br><br><b>1) 日面与日珥蒙版</b>，会屏蔽日面与日珥区域之外的背景；<br><br><b>2) 仅日面蒙版</b>，只屏蔽日面之外的区域，使对比度调整不作用于日珥和背景。</p>
+<p>There are 2 masking options:<br><br><b>1) Surface and prom mask</b>, which will mask areas outside the surface and prominence areas i.e. background;<br><br><b>2) Surface only mask</b>, which will mask out areas outside the solar surface only, so that sharpening is not performed on the prominences or background.</p>	<p>有两种蒙版方式：<br><br><b>1) 日面与日珥蒙版</b>，会屏蔽日面与日珥区域之外的背景；<br><br><b>2) 仅日面蒙版</b>，只屏蔽日面之外的区域，使锐化不作用于日珥和背景。</p>
+<p>Check here to see the mask to help make Shadow and Blur adjustments.</p>	<p>勾选后可查看蒙版，便于调整阴影与模糊。</p>
+<p>Enter the standard deviation of a gaussian blur to be applied to the mask.  This will help soften the blending of areas at the edges of the mask (Range: 0 to 10 ).</p>	<p>输入施加于蒙版的高斯模糊标准差。这有助于柔化蒙版边缘处的过渡（范围：0 到 10）。</p>
+<p>Enter a value for the shadow point of the mask.  This will help clip out unwanted areas from the mask.</p>	<p>输入蒙版的阴影点。这有助于从蒙版中裁掉不需要的区域。</p>
+<p>Check here to use a mask to block out the solar surface when in prominence mode.</p>	<p>勾选后在日珥模式下用蒙版遮住日面。</p>
+<p>Enter the midtones balance parameter for a MTF stretch of the image.  A value less than 0.5 will increase the image brightness while a value greater than 0.50 will make the image darker.</p>	<p>输入图像 MTF 拉伸的中间调平衡参数。小于 0.5 会使图像变亮，大于 0.5 会使图像变暗。</p>
+<p>This parameter adjusts the amount of color contrast to be applied to the image. A value of zero makes no adjustment (Range: 0 to 1).</p>	<p>此参数调整施加于图像的色彩对比量。取零表示不调整（范围：0 到 1）。</p>
+<p>This parameter adjusts the amount of color contrast to be applied to the highlight areas of the image. A value of zero makes no adjustment (Range: 0 to 1).</p>	<p>此参数调整施加于图像高光区域的色彩对比量。取零表示不调整（范围：0 到 1）。</p>
+<p>Enter a value between 0 and 1 to adjust the amount of red used to colour the image.</p>	<p>输入 0 到 1 之间的值，调整给图像上色时使用的红色分量。</p>
+<p>This parameter adjusts the brightness of the image. A value of 1 makes no adjustment lower values will dim the image (Range: 0 to 1).</p>	<p>此参数调整图像亮度。取 1 表示不调整，取值越小图像越暗（范围：0 到 1）。</p>
+<p>Enter a value between 0 and 1 to adjust the amount of green used to colour the image.</p>	<p>输入 0 到 1 之间的值，调整给图像上色时使用的绿色分量。</p>
+<p>Enter a value between 0 and 1 to adjust the amount of blue used to colour the image.</p>	<p>输入 0 到 1 之间的值，调整给图像上色时使用的蓝色分量。</p>
+<p>To load a colour profile, select it from the 'Available colours' drop down box, then click 'Load' to load it.</p>	<p>要载入颜色方案，先在「可用颜色」下拉框中选择，再点「载入」。</p>
+<p>To delete a colour profile, select it from the 'Available colours' drop down box, then click 'Delete' to remove it.</p>	<p>要删除颜色方案，先在「可用颜色」下拉框中选择，再点「删除」。</p>
+<p>Click here to save the current colour profile.</p>	<p>点此保存当前颜色方案。</p>
+<p>Select a colour profile to load or delete.</p>	<p>选择要载入或删除的颜色方案。</p>
+<p>Enter the name under which you would like to save the current colour profile, then click 'Save'. Note that names starting with a period symbol '.' are reserved and should not be used. User defined names starting with a period symbol will not persist between sessions.</p>	<p>输入保存当前颜色方案所用的名称，然后点「保存」。注意以句点「.」开头的名称是保留名称，不应使用；用户自定义的、以句点开头的名称在会话之间不会保留。</p>
+<p>Enter a value between 0 and 15 to adjust the radius of the kernel used for sharpening. A lower value uses a smaller kernel size.  Typically, lower resolution images will use smaller values.</p>	<p>输入 0 到 15 之间的值，调整锐化所用核的半径。取值越小核越小；分辨率较低的图像通常取较小值。</p>
+<p>Enter a value between 0 and 100 to adjust the strength of sharpening.</p>	<p>输入 0 到 100 之间的值，调整锐化强度。</p>
+<p>Enter a value between 0 and 15 to adjust the radius of the kernel used for denoising. A lower value uses a smaller kernel size.  Typically, lower resolution images will use smaller values.</p>	<p>输入 0 到 15 之间的值，调整降噪所用核的半径。取值越小核越小；分辨率较低的图像通常取较小值。</p>
+<p>Enter a value between 0 and 1 to adjust the strength of high frequency denoising. A value of 0 means no denoising, while higher values will introduce more denoising effect.</p>	<p>输入 0 到 1 之间的值，调整高频降噪强度。取 0 表示不降噪，取值越大降噪效果越强。</p>
+CloseView	关闭视图
+ColorMask_mod	色彩蒙版 mod
+CS	连续谱扣除
+GAME	星系蒙版编辑器
+EXIF	EXIF 属性编辑
+PlanckStarColorMapping	普朗克星色映射
+SKill	卫星轨迹修复
+SST	高对比小尺度增强
+ScreenStars	星点增减
+SolarToolbox	太阳工具箱
+MCPWatcher	MCP 监视器
+ColourMask	色彩蒙版
+No database files have been selected for APASS 	尚未为 APASS 选择数据库文件
+AssistedColorCalibration Process Module	辅助色彩校准处理模块
+Applying background correction	正在应用背景校正
+Computing image statistics	正在计算图像统计量
+Failed to start	启动失败
+No images have been selected	尚未选择任何图像
+Timed out	超时
+Attempt to read a bitmap before opening a file	试图在打开文件之前读取位图
+Attempt to write a bitmap before creating a file	试图在创建文件之前写入位图
+PixInsight Standard BMP File Format Module	PixInsight 标准 BMP 文件格式模块
+Applying background neutralization	正在应用背景中性化
+Empty background reference ROI defined	背景参考 ROI 为空
+Empty white reference ROI defined	白参考 ROI 为空
+Extracting catalog star spectrum data	正在提取星表恒星光谱数据
+No catalog stars found	未找到星表中的恒星
+No reference view has been specified	尚未指定参考视图
+No valid photometric zero point reference is available	没有可用的有效测光零点参考
+No valid white reference definitions are available	没有可用的有效白参考定义
+The reference and target images must be different	参考图像与目标图像必须不同
+The white reference database file does not exist	白参考数据库文件不存在
+Combining normalized LRGB channels	正在合成归一化 LRGB 通道
+PixInsight ColourMask Process Module	PixInsight 色彩蒙版处理模块
+Residual Layer 	残差层
+Invalid filter	无效滤波器
+Invalid separable filter parameter	无效的可分离滤波器参数
+Non-square kernel filter defined	定义了非方形的核滤波器
+PixInsight Convolution Process Module	PixInsight 卷积处理模块
+PixInsight Standard Deconvolution Process Module	PixInsight 标准反卷积处理模块
+Missing required Field id attribute	缺少必需的 Field id 属性
+Select Fundamental Ephemerides File	选择基本星历文件
+Select KBO Ephemerides File	选择柯伊伯带天体星历文件
+Failed to load the reference frame	加载参考帧失败
+Failed to reproject the reference stars after a succesful alignment	对齐成功后重投影参考恒星失败
+Generate the list of valid stars	生成有效恒星列表
+Pick stars to fill all quadrants	选取恒星以填满所有象限
+Unable to create out-of-range mask image window	无法创建超范围蒙版图像窗口
+Unable to create synthetic image window	无法创建合成图像窗口
+Unable to create thermal map image window	无法创建热图图像窗口
+Mismatched color spaces between Fourier transform components	傅里叶变换分量之间的色彩空间不匹配
+Mismatched coordinate origins between Fourier transform components	傅里叶变换分量之间的坐标原点不匹配
+Mismatched dimensions between Fourier transform components	傅里叶变换分量之间的尺寸不匹配
+Mismatched image dimensions between Fourier transform components	傅里叶变换分量之间的图像尺寸不匹配
+Mismatched sample types between Fourier transform components	傅里叶变换分量之间的采样类型不匹配
+No database files have been selected for Gaia 	尚未为 Gaia 选择数据库文件
+Activate track view to see Histogram	激活跟踪视图以查看直方图
+PixInsight GHS Process Module	PixInsight GHS 处理模块
+Absolute dimensions in centimeters	以厘米为单位的绝对尺寸
+No channel selected for matching	尚未选择用于匹配的通道
+Minify settings XML source code	压缩设置 XML 源代码
+Select the core CIP-ITRS database file	选择核心 CIP-ITRS 数据库文件
+Select the core DeltaAT database	选择核心 DeltaAT 数据库
+Select the core DeltaT database file	选择核心 DeltaT 数据库文件
+Select the core KBO ephemerides file	选择核心柯伊伯带天体星历文件
+Select the core asteroid ephemerides file	选择核心小行星星历文件
+Select the core fundamental ephemerides file	选择核心基本星历文件
+Select the core nutation model file	选择核心章动模型文件
+Select the default filters database file	选择默认滤镜数据库文件
+Select the default white references database file	选择默认白参考数据库文件
+Computing gradient model	正在计算梯度模型
+Computing order statistic	正在计算次序统计量
+Correcting gradient	正在校正梯度
+Determine clip values for gradients	确定梯度的截断值
+Loading image 	正在加载图像
+AI Background Extraction	AI 背景提取
+Apply mask on processed image	在处理后的图像上应用蒙版
+Close file 	关闭文件
+Close stream failed	关闭流失败
+Create output stream failed	创建输出流失败
+Disable GPU acceleration	禁用 GPU 加速
+Execution Aborted	执行已中止
+Execution Error	执行错误
+FWHM evaluation	FWHM 评估
+Global Parameters	全局参数
+GraXpert AI model	GraXpert AI 模型
+GraXpert preview	GraXpert 预览
+Image size 	图像尺寸
+Mode AI background extraction	模式：AI 背景提取
+Mode Sample-free background extraction	模式：无采样背景提取
+Mode denoising	模式：降噪
+Network response code 	网络响应码
+New GraXpert version	GraXpert 有新版本
+No processed image	没有处理后的图像
+Not an GraXpert info version 	不是 GraXpert 信息版本
+Read file 	读取文件
+Restore astrometric solution	恢复天体测量解
+Sample-Free Background Extraction	无采样背景提取
+Sample-free BGE	无采样背景提取（BGE）
+Select Path to GraXpert Application	选择 GraXpert 应用程序路径
+Set option failed	设置选项失败
+Show GraXpert logs	显示 GraXpert 日志
+Show background	显示背景
+Simplified model	简化模型
+Structure protection	结构保护
+User Interface	用户界面
+Write image failed	写入图像失败
+Active alpha channel extracted and deleted	已提取并删除活动 Alpha 通道
+Invalid sample format	无效的采样格式
+Too few channels specified for a RGB color image	为 RGB 彩色图像指定的通道过少
+Computing two-sided biweight midvariance	正在计算双侧双权中位方差
+No file available for reference outlier rejection	没有可用于参考离群值剔除的文件
+No stars found	未找到恒星
+The image lacks required metadata	图像缺少必需的元数据
+The normalization reference and target images must be different	归一化参考图像与目标图像必须不同
+Average absolute deviation from the median	相对中位数的平均绝对偏差
+Computing two-sided average absolute deviation	正在计算双侧平均绝对偏差
+FITS keyword	FITS 关键字
+Generalized extreme Studentized deviate	广义极端学生化偏差
+HDRComposition requires at least two input images	HDRComposition 至少需要两幅输入图像
+Invalid ROI coordinates	无效的 ROI 坐标
+Winsorized sigma clipping	缩尾 sigma 裁剪
+Invalid derivative order	无效的导数阶数
+Invalid node delta-X component	无效的节点 X 增量分量
+Invalid node delta-Y component	无效的节点 Y 增量分量
+Unknown distortion model interpolation	未知的畸变模型插值方式
+Alignment model could not be loaded	无法加载对齐模型
+Asteroid Coordinates	小行星坐标
+Cannot get current mount coordinates	无法获取当前赤道仪坐标
+Declination of the center of the image	图像中心的赤纬
+Failure to send new property values to Indigo server	向 Indigo 服务器发送新属性值失败
+No device has been specified	尚未指定设备
+Planet Coordinates	行星坐标
+Polar axis displacement	极轴位移
+Right ascension of the center of the image	图像中心的赤经
+The Indigo device controller has not been initialized	Indigo 设备控制器尚未初始化
+Complex images are not supported	不支持复数图像
+Number of iterations parameter out of range	迭代次数参数超出范围
+Target background parameter out of range	目标背景参数超出范围
+The initial background estimate is higher than the target background value	初始背景估计值高于目标背景值
+Embed image resolution information	嵌入图像分辨率信息
+PixInsight LocalHistogramEqualization Process Module	PixInsight 局部直方图均衡处理模块
+Expected a machine-learning model for the 	需要机器学习模型：
+GPU device	GPU 设备
+Not a valid 	无效的
+PixInsight Standard MultiscaleAdaptiveStretch Process Module	PixInsight 标准多尺度自适应拉伸处理模块
+MultiscaleGradientCorrection Preferences	多尺度梯度校正首选项
+Poisson distribution	泊松分布
+Creating xnml for 	正在创建 XNML：
+License registration	许可证注册
+NSGXnml Licensed to 	NSGXnml 授权给
+Weight postfix	权重后缀
+Applying nonlinear function to the flat image	正在对平场图像应用非线性函数
+A channel index must be a positive integer literal	通道索引必须是正整数常量
+A channel index specification must follow an image or variable identifier	通道索引说明必须跟在图像或变量标识符之后
+Computing biweight midvariance	正在计算双权中位方差
+Computing modulus	正在计算模
+Computing percentage bend midvariance	正在计算百分比弯曲中位方差
+Expected expression separator after directive specification	伪指令说明之后应为表达式分隔符
+Expected positive or zero integer literal	应为正整数或零常量
+Illegal directive specification between expressions	表达式之间的伪指令说明非法
+Illegal directive specification inside expression	表达式内部的伪指令说明非法
+Invalid channel index specification	无效的通道索引说明
+Missing comma-delimited subexpression	缺少以逗号分隔的子表达式
+The image has no valid astrometric solution	图像没有有效的天体测量解
+The pragma directive requires one or more arguments	pragma 伪指令需要一个或多个参数
+The symbols directive requires one or more arguments	symbols 伪指令需要一个或多个参数
+Unmatched block comment delimiter	块注释分隔符不匹配
+Corrupted data or unexpected EOF	数据损坏或意外到达文件末尾
+Decoder not implemented for this data format	未实现此数据格式的解码器
+Digital camera raw file format decoder based on LibRaw	基于 LibRaw 的数码相机 RAW 文件格式解码器
+Libraw internal mempool overflowed	LibRaw 内部内存池溢出
+Median filter	中值滤波
+Out of order call of libraw function	LibRaw 函数被乱序调用
+PixInsight Standard RAW File Format Module	PixInsight 标准 RAW 文件格式模块
+RAW Format Hints              Description	RAW 格式提示              说明
+Reading RAW data	正在读取 RAW 数据
+Unspecified error	未指明的错误
+Unsupported file format or not RAW file	不支持的文件格式或不是 RAW 文件
+Constrained Least Squares	约束最小二乘
+PixInsight SolarToolbox Process Module	PixInsight 太阳工具箱处理模块
+Unable to convert greyscale to colour with a mask in place	存在蒙版时无法将灰度图转换为彩色图
+No PSF could be fitted	无法拟合 PSF
+No stars detected	未检测到恒星
+PixInsight Standard TGV Process Module	PixInsight 标准 TGV 处理模块
+FITS header keywords	FITS 头关键字
+Import FITS header keywords as properties	将 FITS 头关键字导入为属性
+XISF Format Hints             Description	XISF 格式提示             说明
+Not executed	未执行
+ABE cannot be executed on complex images.	ABE 无法在复数图像上执行。
+ABE: Complex images not supported.	ABE：不支持复数图像。
+ABE: Unable to create background model image window	ABE：无法创建背景模型图像窗口
+ABE: Unable to create comparison image window	ABE：无法创建比较图像窗口
+ABE: Unable to create corrected image window.	ABE：无法创建校正后图像窗口。
+ABE: Unable to create sample box image window	ABE：无法创建采样框图像窗口
+Access error:	访问错误：
+ACDNR cannot be executed on complex images.	ACDNR 无法在复数图像上执行。
+AdaptiveNormalizationData: Invalid coordinate vectors.	AdaptiveNormalizationData：无效的坐标向量。
+AdaptiveNormalizationData: Invalid image dimensions.	AdaptiveNormalizationData：无效的图像尺寸。
+AdaptiveNormalizationData: Invalid sample vectors.	AdaptiveNormalizationData：无效的采样向量。
+AdaptiveNormalizationData: Invalid spline vectors.	AdaptiveNormalizationData：无效的样条向量。
+AdaptiveStretch cannot be executed on complex images.	AdaptiveStretch 无法在复数图像上执行。
+Aliased controls cannot set event handlers.	别名控件无法设置事件处理器。
+Annotation cannot be executed on complex images.	Annotation 无法在复数图像上执行。
+Application transferred too few scanlines	应用程序传输的扫描行不足
+Application transferred too many scanlines	应用程序传输的扫描行过多
+ArcsinhStretch cannot be executed on complex images.	ArcsinhStretch 无法在复数图像上执行。
+AssignICCProfile cannot be executed on previews.	AssignICCProfile 无法在预览图像上执行。
+AssistedColorCalibration cannot be executed on complex images.	AssistedColorCalibration 无法在复数图像上执行。
+ATrousWaveletTransform cannot be executed on complex images.	ATrousWaveletTransform 无法在复数图像上执行。
+Attempt to perform a convolution with an empty kernel filter.	尝试使用空卷积核执行卷积。
+Attempt to perform a separable convolution with an empty filter.	尝试使用空滤波器执行可分离卷积。
+AutoHistogram cannot be executed on complex images.	AutoHistogram 无法在复数图像上执行。
+Background Reference cannot be complex image.	背景参考不能是复数图像。
+Background Reference must be a color image.	背景参考必须是彩色图像。
+BackgroundNeutralization cannot be executed on complex images.	BackgroundNeutralization 无法在复数图像上执行。
+Backing store not supported	不支持后备存储
+Binarization threshold out of range:	二值化阈值超出范围：
+Binarize cannot be executed on complex images.	Binarize 无法在复数图像上执行。
+Block-level external sequence producer returned an error code	块级外部序列生成器返回错误码
+Bogus buffer control mode	无效的缓冲区控制模式
+Bogus Huffman table definition	无效的霍夫曼表定义
+Buffer passed to JPEG library is too small	传给 JPEG 库的缓冲区太小
+Can not read scanlines from a tiled image	无法从瓦片图像读取扫描行
+Can not read TIFF directory	无法读取 TIFF 目录
+Can not read TIFF directory count	无法读取 TIFF 目录计数
+Can not read tiles from a striped image	无法从条带图像读取瓦片
+Can not write scanlines to a tiled image	无法将扫描行写入瓦片图像
+Cannot allocate strip offset and bytecount arrays	无法分配条带偏移与字节数数组
+Cannot clone a Control handle	无法克隆 Control 句柄
+Cannot clone a graphics context handle	无法克隆图形上下文句柄
+Cannot clone a NetworkTransfer handle	无法克隆 NetworkTransfer 句柄
+Cannot clone a Sizer handle	无法克隆 Sizer 句柄
+Cannot clone a Thread handle	无法克隆线程句柄
+Cannot clone a Timer handle	无法克隆定时器句柄
+Cannot clone a TreeBox::Node handle	无法克隆 TreeBox::Node 句柄
+Cannot clone an Action handle	无法克隆 Action 句柄
+Cannot clone an ExternalProcess handle	无法克隆 ExternalProcess 句柄
+Cannot compute distortion correction: Insufficient control points.	无法计算畸变校正：控制点不足。
+Cannot convert bit expression to desired type.	无法将位表达式转换为目标类型。
+Cannot convert string expression to desired type.	无法将字符串表达式转换为目标类型。
+Cannot copy a sequential file using block copy	无法使用块复制复制顺序文件
+Cannot create a handle to a closed ephemeris file.	无法为已关闭的星历文件创建句柄。
+Cannot create Dictionary from provided samples	无法根据提供的样本创建 Dictionary
+Cannot create LOGICAL column in ASCII table	无法在 ASCII 表中创建 LOGICAL 列
+Cannot deserialize RBF data of	无法反序列化以下 RBF 数据：
+Cannot find SubIFD tag	找不到 SubIFD 标签
+Cannot handle zero scanline size	无法处理零扫描行尺寸
+Cannot handle zero strip size	无法处理零条带尺寸
+Cannot handle zero tile size	无法处理零瓦片尺寸
+Cannot have a vector string column	不能包含向量字符串列
+Cannot index a scalar value	无法对标量值取索引
+Cannot move a sequential file using block copy	无法使用块复制移动顺序文件
+Cannot open an image in a single row of this column.	无法在此列的单个行中打开图像。
+Cannot open ICC profile:	无法打开 ICC 配置文件：
+Cannot open the image in a binary table cell.	无法在二进制表格单元格中打开图像。
+Cannot project control point coordinates	无法投影控制点坐标
+Cannot read	无法读取
+Cannot read number from ASCII table	无法从 ASCII 表读取数值
+Cannot read TIFF header	无法读取 TIFF 文件头
+Cannot regenerate the solution: missing generation parameters:	无法重新生成解：缺少生成参数：
+Cannot regenerate the solution: no control points	无法重新生成解：没有控制点
+Cannot retrieve required telescope device: No telescope device name has been specified	无法获取所需的望远镜设备：尚未指定望远镜设备名称
+Cannot retrieve required telescope device: The Indigo Mount Controller interface has no selected device	无法获取所需的望远镜设备：Indigo 赤道仪控制器接口没有选中的设备
+Cannot retrieve the active telescope device: No active telescope has been defined	无法获取活动望远镜设备：尚未定义活动望远镜
+Cannot retrieve the active telescope device: The active telescope property is not available	无法获取活动望远镜设备：活动望远镜属性不可用
+Cannot serialize a distortion model with more than one global term	无法序列化包含多个全局项的畸变模型
+Cannot use a partial preview as normalization reference:	无法将部分预览用作归一化参考：
+Cannot use a partial preview as reference:	无法将部分预览用作参考：
+Cannot use an array as an index value	无法将数组用作索引值
+Cannot use primary array for GTI filter	无法将主数组用作 GTI 过滤
+Cannot write	无法写入
+Cannot write to a GZIP or COMPRESS compressed file.	无法写入 GZIP 或 COMPRESS 压缩文件。
+CFITSIO error message stack:	CFITSIO 错误消息栈：
+Channel index out of range:	通道索引超出范围：
+ChannelCombination cannot be executed on complex images.	ChannelCombination 无法在复数图像上执行。
+ChannelCombination: Incompatible source image dimensions:	ChannelCombination：源图像尺寸不兼容：
+ChannelCombination: Invalid source color space:	ChannelCombination：无效的源色彩空间：
+ChannelCombination: Invalid source image:	ChannelCombination：无效的源图像：
+ChannelCombination: Source image not found:	ChannelCombination：未找到源图像：
+ChannelData element: Invalid channel data size: Expected	ChannelData 元素：无效的通道数据大小：应为
+ChannelExtraction cannot be executed on complex images.	ChannelExtraction 无法在复数图像上执行。
+ChannelExtraction: Invalid target image:	ChannelExtraction：无效的目标图像：
+ChannelExtraction: Unable to create target image:	ChannelExtraction：无法创建目标图像：
+ChannelMatch cannot be executed on complex images.	ChannelMatch 无法在复数图像上执行。
+ChannelMatch cannot be executed on grayscale images.	ChannelMatch 无法在灰度图像上执行。
+Clipped pixels percentage out of range:	裁剪像素百分比超出范围：
+Clipping point out of range:	裁剪点超出范围：
+ColorCalibration cannot be executed on complex images.	ColorCalibration 无法在复数图像上执行。
+ColorSaturation cannot be executed on complex images.	ColorSaturation 无法在复数图像上执行。
+ColorSaturation cannot be executed on grayscale images.	ColorSaturation 无法在灰度图像上执行。
+Colourise cannot be executed on complex images.	Colourise 无法在复数图像上执行。
+ColourMask cannot be executed on complex images.	ColourMask 无法在复数图像上执行。
+ColourMask: Unable to create mask image window.	ColourMask：无法创建蒙版图像窗口。
+ColourMask: Unable to create working image window.	ColourMask：无法创建工作图像窗口。
+Complex images are not supported by MLDenoise.	MLDenoise 不支持复数图像。
+Compressed image has too many dimensions	压缩图像的维度过多
+Computed scanline size is zero	计算得到的扫描行尺寸为零
+Computed tile row size is zero	计算得到的瓦片行尺寸为零
+ConvertToGrayscale cannot be executed on complex images.	ConvertToGrayscale 无法在复数图像上执行。
+ConvertToGrayscale cannot be executed on grayscale images.	ConvertToGrayscale 无法在灰度图像上执行。
+ConvertToRGBColor cannot be executed on color images.	ConvertToRGBColor 无法在彩色图像上执行。
+ConvertToRGBColor cannot be executed on complex images.	ConvertToRGBColor 无法在复数图像上执行。
+Convolution cannot be executed on complex images.	Convolution 无法在复数图像上执行。
+Coordinates out of range in incremental read operation	增量读取操作中坐标超出范围
+Coordinates out of range in incremental write operation	增量写入操作中坐标超出范围
+Corrupt JPEG data: bad arithmetic code	JPEG 数据损坏：算术编码错误
+Corrupt JPEG data: bad Huffman code	JPEG 数据损坏：霍夫曼编码错误
+Corrupt JPEG data: premature end of data segment	JPEG 数据损坏：数据段提前结束
+Could not allocate memory to hold polygon parameters	无法分配用于保存多边形参数的内存
+Could not allocate temporary memory in median function	中值函数中无法分配临时内存
+Could not build TIME column for GTIFILTER	无法为 GTIFILTER 构建 TIME 列
+Could not build X column for REGFILTER	无法为 REGFILTER 构建 X 列
+Could not build Y column for REGFILTER	无法为 REGFILTER 构建 Y 列
+Could not extract valid pair of column names from REGFILTER	无法从 REGFILTER 提取有效的列名对
+Could not find vector size of column.	无法找到该列的向量尺寸。
+Could not locate columns indicated for WCS info	无法定位 WCS 信息所指的列
+Could not move to REGION extension.	无法移动到 REGION 扩展。
+Couldn't create tone curve with zero segments and no table	段数为零且没有查找表时无法创建色调曲线
+CPU-only retry also failed:	仅用 CPU 重试也失败：
+CreateAlphaChannels cannot be executed on complex images.	CreateAlphaChannels 无法在复数图像上执行。
+Crop cannot be executed on previews.	Crop 无法在预览图像上执行。
+Crop: Invalid operation: Null target image dimensions	Crop：无效操作：目标图像尺寸为空
+CurveBase: Internal error: Invalid curve type	CurveBase：内部错误：无效的曲线类型
+CurvesTransformation cannot be executed on complex images.	CurvesTransformation 无法在复数图像上执行。
+Database files not available for the	以下对象没有可用的数据库文件：
+DCT coefficient out of range	DCT 系数超出范围
+Debayer cannot be executed on complex images.	Debayer 无法在复数图像上执行。
+Deconvolution cannot be executed on complex images.	Deconvolution 无法在复数图像上执行。
+Default filter library not found:	未找到默认滤镜库：
+DefectMap cannot be executed on complex images.	DefectMap 无法在复数图像上执行。
+DefectMap cannot be executed on previews.	DefectMap 无法在预览图像上执行。
+DigitalDevelopment cannot be executed on complex images.	DigitalDevelopment 无法在复数图像上执行。
+Directory has not yet been written	目录尚未写入
+Directory search error:	目录搜索错误：
+Divide cannot be executed on complex images.	Divide 无法在复数图像上执行。
+Division by zero or insignificant scalar	除以零或数值过小的标量
+Download failed:	下载失败：
+Draw the extracted sample boxes over a duplicate of the target image.	在目标图像的副本上绘制提取的采样框。
+Duplicate Cache child element.	重复的 Cache 子元素。
+Duplicate DOCTYPE declaration.	重复的 DOCTYPE 声明。
+Duplicate index definition for derivative order	导数阶次的索引定义重复
+Duplicate tag found	发现重复标签
+Duplicate XML declaration.	重复的 XML 声明。
+DynamicAlignment cannot be executed on complex images.	DynamicAlignment 无法在复数图像上执行。
+DynamicAlignment cannot be executed on previews.	DynamicAlignment 无法在预览图像上执行。
+DynamicAlignment: Unable to create registered image window:	DynamicAlignment：无法创建配准后图像窗口：
+DynamicBackgroundExtraction cannot be executed on complex images.	DynamicBackgroundExtraction 无法在复数图像上执行。
+DynamicBackgroundExtraction cannot be executed on previews.	DynamicBackgroundExtraction 无法在预览图像上执行。
+DynamicBackgroundExtraction: Unable to create corrected image window.	DynamicBackgroundExtraction：无法创建校正后图像窗口。
+DynamicBackgroundExtraction: Unable to create model image window.	DynamicBackgroundExtraction：无法创建模型图像窗口。
+DynamicCrop cannot be executed on previews.	DynamicCrop 无法在预览图像上执行。
+Empty background reference ROI defined.	已定义的背景参考 ROI 为空。
+Empty distortion model	畸变模型为空
+Empty drizzle data file.	drizzle 数据文件为空。
+Empty ephemeris data	星历数据为空
+Empty ephemeris data list.	星历数据列表为空。
+Empty expansion data	展开数据为空
+Empty image file:	图像文件为空：
+Empty index.	索引为空。
+Empty masked image.	被蒙版覆盖的图像为空。
+Empty master calibration frame image:	主校准帧图像为空：
+Empty normalization data file.	归一化数据文件为空。
+Empty object identifier.	天体标识符为空。
+Empty or corrupted expansion data	展开数据为空或已损坏
+Empty or insignificant magnitude range.	星等范围为空或过小。
+Empty or insignificant time span defined.	已定义的时间跨度为空或过小。
+Empty or invalid ROI defined.	已定义的 ROI 为空或无效。
+Empty origin identifier.	原点标识符为空。
+Empty point source data.	点源数据为空。
+Empty reference image:	参考图像为空：
+Empty ROI defined	已定义的 ROI 为空
+Empty ROI defined.	已定义的 ROI 为空。
+Empty source file path definition.	源文件路径定义为空。
+Empty source image:	源图像为空：
+Error calculating datamin and datamax for column:	计算列的数据最小值和最大值时出错：
+Error converting region to pixel coordinates.	将区域转换为像素坐标时出错。
+Error fetching directory count	获取目录计数时出错
+Error fetching directory link	获取目录链接时出错
+Error flushing data before directory write	写入目录前刷新数据时出错
+Error getting the dimensions of the image	获取图像尺寸时出错
+Error performing GetStars or MatchStars:	执行 GetStars 或 MatchStars 时出错：
+Error post-encoding before directory write	写入目录前的编码后处理出错
+Error reading BITPIX value of compressed image	读取压缩图像的 BITPIX 值时出错
+Error reading data buffer from file:	从文件读取数据缓冲区时出错：
+Error reading FITS header keyword	读取 FITS 头部关键字时出错
+Error reading NAXIS value of compressed image	读取压缩图像的 NAXIS 值时出错
+Error reading NAXISn values of compressed image	读取压缩图像的 NAXISn 值时出错
+Error reading TIFF file	读取 TIFF 文件时出错
+Error updating TIFF header	更新 TIFF 文件头时出错
+Error while loading the inference engine:	加载推理引擎时出错：
+Error writing data buffer to file:	将数据缓冲区写入文件时出错：
+Error writing directory link	写入目录链接时出错
+Error writing FITS header keyword	写入 FITS 头部关键字时出错
+Error writing SubIFD directory link	写入 SubIFD 目录链接时出错
+Error writing TIFF header	写入 TIFF 文件头时出错
+Error: ASCII table TFORM code is blank	错误：ASCII 表的 TFORM 代码为空
+ExponentialTransformation cannot be executed on complex images.	ExponentialTransformation 无法在复数图像上执行。
+External sequences are not valid	外部序列无效
+ExtractAlphaChannels cannot be executed on complex images.	ExtractAlphaChannels 无法在复数图像上执行。
+ExtractAlphaChannels cannot be executed on previews.	ExtractAlphaChannels 无法在预览图像上执行。
+Failed to allocate buffer to copy the heap	分配用于复制堆的缓冲区失败
+Failed to allocate buffer to test the heap	分配用于检测堆的缓冲区失败
+Failed to allocate fields array	分配字段数组失败
+Failed to allocate memory for Region data	为区域数据分配内存失败
+Failed to allocate memory for Region WCS data	为区域 WCS 数据分配内存失败
+Failed to copy table cell to new primary array:	将表格单元格复制到新的主数组失败：
+Failed to create copy of the heap	创建堆的副本失败
+Failed to create temporary file for the heap	为堆创建临时文件失败
+Failed to execute APASS process.	执行 APASS 进程失败。
+Failed to execute Gaia process.	执行 Gaia 进程失败。
+Failed to find row matching this expression:	找不到匹配此表达式的行：
+Failed to open the file.	打开文件失败。
+Failed to read COMPONENT column for region	读取区域的 COMPONENT 列失败
+Failed to read file:	读取文件失败：
+Failed to read R column for region	读取区域的 R 列失败
+Failed to read ROTANG column for region	读取区域的 ROTANG 列失败
+Failed to read X column for polygon region	读取多边形区域的 X 列失败
+Failed to read Y column for polygon region	读取多边形区域的 Y 列失败
+Failed to start process	启动进程失败
+Failure to annotate finder chart image.	标注寻星图图像失败。
+Failure to configure the APASS XPSD server:	配置 APASS XPSD 服务器失败：
+Failure to configure the Gaia XPSD server:	配置 Gaia XPSD 服务器失败：
+Failure to generate finding chart image.	生成寻星图图像失败。
+Failure to plate solve image:	对图像进行天体测量解析失败：
+FastRotation cannot be executed on previews.	FastRotation 无法在预览图像上执行。
+FFT: invalid transform length.	FFT：无效的变换长度。
+File flush failed:	文件刷新失败：
+File not found:	未找到文件：
+File not open for reading	文件未打开用于读取
+File not open for writing	文件未打开用于写入
+File not valid IRAF image header	文件不是有效的 IRAF 图像头
+File not valid IRAF pixel file:	文件不是有效的 IRAF 像素文件：
+File read error:	文件读取错误：
+File seek error:	文件定位错误：
+File too short	文件过短
+File write error:	文件写入错误：
+FileDataCache: Empty file identifier	FileDataCache：文件标识符为空
+FileDataCache: Internal error: Invalid application configuration directory	FileDataCache：内部错误：无效的应用程序配置目录
+FileDataCache: Invalid application instance	FileDataCache：无效的应用程序实例
+FileDataCache: Invalid file identifier	FileDataCache：无效的文件标识符
+FileFormat: Empty format name, file extension or MIME type specified	FileFormat：指定的格式名称、文件扩展名或 MIME 类型为空
+FilterManager: Internal error: Invalid application configuration directory	FilterManager：内部错误：无效的应用程序配置目录
+FilterManager: Internal error: Invalid application instance	FilterManager：内部错误：无效的应用程序实例
+FilterManager: Internal error: Unable to acquire a valid filter database file path	FilterManager：内部错误：无法获取有效的滤镜数据库文件路径
+FilterManager: Internal error: Unable to acquire a valid white reference database file path	FilterManager：内部错误：无法获取有效的白参考数据库文件路径
+FindingChart cannot be executed on previews:	FindingChart 无法在预览图像上执行：
+Floating Point Out Of Range Policy	浮点越界处理策略
+FluxCalibration cannot be executed on an already flux-calibrated image.	FluxCalibration 无法对已完成流量定标的图像执行。
+FluxCalibration cannot be executed on color images.	FluxCalibration 无法在彩色图像上执行。
+FluxCalibration cannot be executed on complex images.	FluxCalibration 无法在复数图像上执行。
+FourierTransform cannot be executed on complex images.	FourierTransform 无法在复数图像上执行。
+Fractional sampling not implemented yet	尚未实现分数采样
+Fractional scanlines cannot be read	无法读取分数扫描行
+Fractional scanlines cannot be written	无法写入分数扫描行
+Frame index is too large	帧索引过大
+Galactic region coordinates not supported	不支持银道坐标系区域坐标
+GeneralAnalyticalPointingModel::FitModelForPierSide: Missing required sync data.	GeneralAnalyticalPointingModel::FitModelForPierSide：缺少必需的同步数据。
+GenericChebyshevFit: Empty or insignificant function evaluation interval.	GenericChebyshevFit：函数求值区间为空或过小。
+GenericChebyshevFit: Invalid coefficient series for dimension	GenericChebyshevFit：维度对应的系数序列无效
+GHS cannot be executed on complex images.	GHS 无法在复数图像上执行。
+GradientCorrection cannot be executed on complex images.	GradientCorrection 无法在复数图像上执行。
+GradientCorrection cannot be executed on partial previews.	GradientCorrection 无法在部分预览图像上执行。
+GradientsHdrCompression cannot be executed on complex images.	GradientsHdrCompression 无法在复数图像上执行。
+GraXpert cannot be executed on complex images.	GraXpert 无法在复数图像上执行。
+GREYCstoration cannot be executed on complex images.	GREYCstoration 无法在复数图像上执行。
+GTI extension not found in this file	此文件中未找到 GTI 扩展
+HDRMultiscaleTransform cannot be executed on complex images.	HDRMultiscaleTransform 无法在复数图像上执行。
+Highlights range expansion out of range:	高光范围扩展超出范围：
+HistogramTransformation cannot be executed on complex images.	HistogramTransformation 无法在复数图像上执行。
+Huffman code size table out of bounds	霍夫曼编码尺寸表越界
+ICCProfileTransformation cannot be executed on previews.	ICCProfileTransformation 无法在预览图像上执行。
+If out of range:	越界时：
+Illegal value for SubIFD tag	SubIFD 标签的值非法
+Image not found	未找到图像
+Implicit datatype conversion is not supported when writing to compressed images	写入压缩图像时不支持隐式数据类型转换
+In constant definition: Channel index out of range:	常量定义中：通道索引超出范围：
+In global variable initialization: Missing global operator:	全局变量初始化中：缺少全局运算符：
+In symbol function specification: Missing left parenthesis:	符号函数定义中：缺少左括号：
+In symbol function specification: Missing right parenthesis:	符号函数定义中：缺少右括号：
+Incompatible image geometry:	图像几何不兼容：
+Incompatible reference image color space:	参考图像色彩空间不兼容：
+Incompatible source data type:	源数据类型不兼容：
+Incompatible source geometry:	源几何不兼容：
+Index out of range	索引超出范围
+Index value must be an integer type	索引值必须是整数类型
+IndigoDeviceControllerInstance: Failure to connect to Indigo server	IndigoDeviceControllerInstance：连接 Indigo 服务器失败
+IndigoDeviceControllerInstance: Failure to send new property values.	IndigoDeviceControllerInstance：发送新的属性值失败。
+Input file read error	输入文件读取错误
+Input GTI must be time-ordered for GTIOVERLAP	用于 GTIOVERLAP 的输入 GTI 必须按时间排序
+Integer overflow in gtStripContig	gtStripContig 中整数溢出
+Integer overflow in gtStripSeparate	gtStripSeparate 中整数溢出
+IntegerResample cannot be executed on previews.	IntegerResample 无法在预览图像上执行。
+Internal error: AbstractINDIMountInterface: Unknown Pointing Model.	内部错误：AbstractINDIMountInterface：未知的指向模型。
+Internal error: Inconsistent node hierarchy.	内部错误：节点层次结构不一致。
+Internal error: INDICCDFrameInstance: Invalid frame type.	内部错误：INDICCDFrameInstance：无效的帧类型。
+Internal error: INDICCDFrameInstance: Invalid upload mode.	内部错误：INDICCDFrameInstance：无效的上传模式。
+Internal error: INDIClient: Invalid number format in	内部错误：INDIClient：数字格式无效：
+Internal error: INDIClient: Invalid property data in	内部错误：INDIClient：属性数据无效：
+Internal error: INDIClient: Null pointer argument in	内部错误：INDIClient：空指针参数：
+Internal error: INDIMountInstance: Invalid slew rate.	内部错误：INDIMountInstance：无效的转动速率。
+Internal Error: Insufficient PSF data.	内部错误：PSF 数据不足。
+Internal error: Invalid annotation script execution.	内部错误：标注脚本执行无效。
+Internal error: Invalid APASS data release index.	内部错误：无效的 APASS 数据发布索引。
+Internal error: Invalid APASS data release parameter.	内部错误：无效的 APASS 数据发布参数。
+Internal error: Invalid channel selection in JPEG write operation	内部错误：JPEG 写入操作中通道选择无效
+Internal error: Invalid destination array size.	内部错误：无效的目标数组大小。
+Internal error: Invalid dialog operation mode in ConvolutionFilterCodeDialog	内部错误：ConvolutionFilterCodeDialog 中的对话框操作模式无效
+Internal error: Invalid file path	内部错误：无效的文件路径
+Internal error: Invalid finder chart image generation.	内部错误：寻星图图像生成无效。
+Internal error: Invalid function call.	内部错误：无效的函数调用。
+Internal error: Invalid Gaia data release index.	内部错误：无效的 Gaia 数据发布索引。
+Internal error: Invalid Gaia data release parameter.	内部错误：无效的 Gaia 数据发布参数。
+Internal error: invalid image block.	内部错误：无效的图像块。
+Internal error: Invalid JPEG normalization range	内部错误：无效的 JPEG 归一化范围
+Internal error: Invalid JPEG read operation	内部错误：无效的 JPEG 读取操作
+Internal error: Invalid JPEG write operation	内部错误：无效的 JPEG 写入操作
+Internal error: Invalid object	内部错误：无效的对象
+Internal error: Invalid or corrupted compressed subblock data.	内部错误：压缩子块数据无效或已损坏。
+Internal error: Invalid pixel selection in JPEG write operation	内部错误：JPEG 写入操作中像素选择无效
+Internal error: Invalid script execution:	内部错误：脚本执行无效：
+Internal error: Invalid star generation script execution.	内部错误：星点生成脚本执行无效。
+Internal error: Invalid TIFF normalization range	内部错误：无效的 TIFF 归一化范围
+Internal error: Invalid TIFF read operation	内部错误：无效的 TIFF 读取操作
+Internal error: Invalid TIFF write operation	内部错误：无效的 TIFF 写入操作
+Internal error: JPEGWriter instance not initialized	内部错误：JPEGWriter 实例未初始化
+Internal error: out of memory in	内部错误：内存不足，位置：
+Internal error: PointingModel::EvaluateBasis: Matrix dimensions do not match	内部错误：PointingModel::EvaluateBasis：矩阵维度不匹配
+Internal error: regular expression evaluation failure	内部错误：正则表达式求值失败
+Internal error: TIFFWriter instance not initialized	内部错误：TIFFWriter 实例未初始化
+Internal error: unknown intensity units	内部错误：未知的强度单位
+Internal error: wrong or corrupted image data parameters.	内部错误：图像数据参数错误或已损坏。
+Internal parser error: Invalid internal image reference.	内部解析器错误：无效的内部图像引用。
+Invalid access to nonexistent multiscale transform layer.	访问了不存在的多尺度变换层。
+Invalid access to undefined multiscale transform layer.	访问了未定义的多尺度变换层。
+Invalid access to uninitialized adaptive selection transformation.	访问了未初始化的自适应选择变换。
+Invalid access to uninitialized convolution	访问了未初始化的卷积
+Invalid access to uninitialized FFT-based convolution.	访问了未初始化的基于 FFT 的卷积。
+Invalid access to uninitialized morphological transformation.	访问了未初始化的形态学变换。
+Invalid access to uninitialized separable convolution	访问了未初始化的可分离卷积
+Invalid access to uninitialized wavelet transform.	访问了未初始化的小波变换。
+Invalid adaptive normalization vector lengths.	自适应归一化向量长度无效。
+Invalid alpha channel index:	无效的 alpha 通道索引：
+Invalid angle	无效的角度
+Invalid APASS XPSD server execution.	无效的 APASS XPSD 服务器执行。
+Invalid API function resolver address.	无效的 API 函数解析地址。
+Invalid API module description structure.	无效的 API 模块描述结构。
+Invalid asteroid id range syntax:	无效的小行星编号范围语法：
+Invalid astrometric solution: unable to compute celestial coordinates for the center of the image	无效的天体测量解：无法计算图像中心的天球坐标
+Invalid block position:	无效的块位置：
+Invalid block size:	无效的块大小：
+Invalid buffer length.	无效的缓冲区长度。
+Invalid buffer size	无效的缓冲区大小
+Invalid call for CIO-based topocentric observer.	对基于 CIO 的站心观测者的调用无效。
+Invalid call for equinox-based topocentric observer.	对基于春分点的站心观测者的调用无效。
+Invalid call to XISFReader::	对 XISFReader:: 的调用无效：
+Invalid call to XISFWriter::	对 XISFWriter:: 的调用无效：
+Invalid CDATA section outside an element.	元素之外出现无效的 CDATA 段。
+Invalid cell child index.	无效的单元格子索引。
+Invalid cell patch count.	无效的单元格分块数量。
+Invalid cell patch index.	无效的单元格分块索引。
+Invalid close operation in FITS file	FITS 文件中的关闭操作无效
+Invalid color quantization mode change	无效的色彩量化模式切换
+Invalid compressed subblock data.	压缩子块数据无效。
+Invalid control point matrices	无效的控制点矩阵
+Invalid crop request	无效的裁剪请求
+Invalid DeflateCodec value.	无效的 DeflateCodec 值。
+Invalid DeltaAT time span.	无效的 DeltaAT 时间跨度。
+Invalid derivative order.	无效的导数阶次。
+Invalid DOCTYPE declaration after the root element.	根元素之后出现无效的 DOCTYPE 声明。
+Invalid DOCTYPE tag syntax.	无效的 DOCTYPE 标签语法。
+Invalid expansion data	展开数据无效
+Invalid expansion data position	展开数据位置无效
+Invalid expansion start time	展开起始时间无效
+Invalid Fallback:Threshold value	无效的 Fallback:Threshold 值
+Invalid FFT input matrix dimensions.	无效的 FFT 输入矩阵维度。
+Invalid first expansion start time	首个展开起始时间无效
+Invalid hex-encoded string length	无效的十六进制编码字符串长度
+Invalid horizontal resolution:	无效的水平分辨率：
+Invalid identifier:	无效的标识符：
+Invalid image	无效的图像
+Invalid image height:	无效的图像高度：
+Invalid image identifier:	无效的图像标识符：
+Invalid image width:	无效的图像宽度：
+Invalid index numberOfExpansions attribute value.	索引的 numberOfExpansions 属性值无效。
+Invalid index position attribute value.	索引的 position 属性值无效。
+Invalid input size.	无效的输入大小。
+Invalid JPEG file structure: missing SOS marker	JPEG 文件结构无效：缺少 SOS 标记
+Invalid JPEG file structure: two SOF markers	JPEG 文件结构无效：出现两个 SOF 标记
+Invalid JPEG file structure: two SOI markers	JPEG 文件结构无效：出现两个 SOI 标记
+Invalid last expansion start time	最后的展开起始时间无效
+Invalid length of point weights vector.	点权重向量的长度无效。
+Invalid linear matrix dimensions in point surface spline definition	点曲面样条定义中的线性矩阵维度无效
+Invalid LinearApproximation matrix dimensions	无效的 LinearApproximation 矩阵维度
+Invalid local distortion derivative order.	无效的局部畸变导数阶次。
+Invalid local distortion regularization factor.	无效的局部畸变正则化因子。
+Invalid local normalization data:	无效的局部归一化数据：
+Invalid Local:Center matrix	无效的 Local:Center 矩阵
+Invalid Local:Radius value	无效的 Local:Radius 值
+Invalid Local:Radius vector length	无效的 Local:Radius 向量长度
+Invalid Local:X:Coefficients vector length	无效的 Local:X:Coefficients 向量长度
+Invalid Local:X:NodeOffsets vector	无效的 Local:X:NodeOffsets 向量
+Invalid Local:X:Nodes matrix	无效的 Local:X:Nodes 矩阵
+Invalid Local:X:Normalization matrix	无效的 Local:X:Normalization 矩阵
+Invalid Local:X:Normalization value	无效的 Local:X:Normalization 值
+Invalid Local:X:ShapeParameter value	无效的 Local:X:ShapeParameter 值
+Invalid Local:X:ShapeParameter vector length	无效的 Local:X:ShapeParameter 向量长度
+Invalid Local:Y:Coefficients vector length	无效的 Local:Y:Coefficients 向量长度
+Invalid Local:Y:NodeOffsets vector	无效的 Local:Y:NodeOffsets 向量
+Invalid Local:Y:Nodes matrix	无效的 Local:Y:Nodes 矩阵
+Invalid Local:Y:Normalization matrix	无效的 Local:Y:Normalization 矩阵
+Invalid Local:Y:Normalization value	无效的 Local:Y:Normalization 值
+Invalid Local:Y:ShapeParameter value	无效的 Local:Y:ShapeParameter 值
+Invalid Local:Y:ShapeParameter vector length	无效的 Local:Y:ShapeParameter 向量长度
+Invalid magnitudeRange attribute value.	magnitudeRange 属性值无效。
+Invalid matrix dimension:	无效的矩阵维度：
+Invalid matrix inversion: Non-square or empty matrix.	矩阵求逆无效：矩阵非方阵或为空。
+Invalid matrix inversion: Singular matrix.	矩阵求逆无效：矩阵奇异。
+Invalid matrix multiplication.	无效的矩阵乘法。
+Invalid matrix-vector multiplication.	无效的矩阵与向量乘法。
+Invalid maximum output size.	无效的最大输出大小。
+Invalid metadata in master calibration image:	主校准图像中的元数据无效：
+Invalid non-parametric argument:	无效的非参数化参数：
+Invalid number of cells.	单元格数量无效。
+Invalid number of coefficients.	系数数量无效。
+Invalid number of coordinate items:	坐标项数量无效：
+Invalid number of image channels:	图像通道数量无效：
+Invalid number of nodes.	节点数量无效。
+Invalid number of patches.	分块数量无效。
+Invalid number of weights.	权重数量无效。
+Invalid or corrupted block.	数据块无效或已损坏。
+Invalid or corrupted compressed block data.	压缩块数据无效或已损坏。
+Invalid or corrupted ICC profile:	ICC 配置文件无效或已损坏：
+Invalid or corrupted registration points.	配准点无效或已损坏。
+Invalid or corrupted XISF file.	XISF 文件无效或已损坏。
+Invalid or corrupted XMARS file.	XMARS 文件无效或已损坏。
+Invalid or corrupted XMLM file.	XMLM 文件无效或已损坏。
+Invalid or corrupted XPSD file.	XPSD 文件无效或已损坏。
+Invalid or empty directory name	目录名为空或无效
+Invalid or empty directory search path	目录搜索路径为空或无效
+Invalid or empty file name	文件名为空或无效
+Invalid or insufficient image integration data.	图像积分数据无效或不足。
+Invalid or insufficient image registration data.	图像配准数据无效或不足。
+Invalid or uninitialized time point specified.	指定的时间点无效或未初始化。
+Invalid or unsupported	无效或不支持：
+Invalid or unsupported distortion model order	畸变模型阶次无效或不支持
+Invalid or unsupported index order attribute value.	index order 属性值无效或不支持。
+Invalid output tensor from model.	模型输出的张量无效。
+Invalid patch radius.	分块半径无效。
+Invalid pixel normalization range	无效的像素归一化范围
+Invalid point grid interpolation: Empty interpolation region	点网格插值无效：插值区域为空
+Invalid point grid interpolation: Invalid grid distance	点网格插值无效：网格间距无效
+Invalid point grid interpolation: Invalid interpolation region coordinates	点网格插值无效：插值区域坐标无效
+Invalid point grid interpolation: Invalid matrix dimensions	点网格插值无效：矩阵维度无效
+Invalid point grid interpolation: Missing grid distance parameter	点网格插值无效：缺少网格间距参数
+Invalid point grid interpolation: Missing interpolation matrices	点网格插值无效：缺少插值矩阵
+Invalid point grid interpolation: Missing interpolation region parameter	点网格插值无效：缺少插值区域参数
+Invalid projection center attribute value.	投影中心属性值无效。
+Invalid projective transformation	无效的投影变换
+Invalid Projective:ImageToNative matrix dimensions	无效的 Projective:ImageToNative 矩阵维度
+Invalid Projective:NativeToImage matrix dimensions	无效的 Projective:NativeToImage 矩阵维度
+Invalid ProjectiveTransformation:ImageToProjection matrix dimensions	无效的 ProjectiveTransformation:ImageToProjection 矩阵维度
+Invalid ProjectiveTransformation:ProjectionToImage matrix dimensions	无效的 ProjectiveTransformation:ProjectionToImage 矩阵维度
+Invalid radial basis function.	无效的径向基函数。
+Invalid read operation in FITS file	FITS 文件中的读取操作无效
+Invalid readout preview zoom factor:	无效的相机预览缩放系数：
+Invalid recursive surface spline serialization.	无效的递归曲面样条序列化。
+Invalid reference dimensions.	无效的参考维度。
+Invalid regular expression syntax:	无效的正则表达式语法：
+Invalid rejected control point index	无效的被剔除控制点索引
+Invalid rendering intent:	无效的渲染意图：
+Invalid scaling factor.	无效的缩放因子。
+Invalid simplifier reject fraction parameter	无效的简化器剔除比例参数
+Invalid size of encoded vector data in	编码向量数据大小无效：
+Invalid smoothing factor.	无效的平滑因子。
+Invalid SOS parameters for sequential JPEG	顺序 JPEG 的 SOS 参数无效
+Invalid spline raw serialization version data.	无效的样条原始序列化版本数据。
+Invalid spline raw serialization.	无效的样条原始序列化。
+Invalid SSM header data.	无效的 SSM 文件头数据。
+Invalid surface spline coefficient vector length	无效的曲面样条系数向量长度
+Invalid surface spline coefficient vector length.	无效的曲面样条系数向量长度。
+Invalid surface spline maximum control points parameter	无效的曲面样条最大控制点数参数
+Invalid surface spline order parameter	无效的曲面样条阶次参数
+Invalid surface spline scaling factor parameter	无效的曲面样条缩放因子参数
+Invalid surface spline smoothness parameter	无效的曲面样条平滑度参数
+Invalid swap image file data:	无效的交换图像文件数据：
+Invalid TIFF directory; tags are not sorted in ascending order	TIFF 目录无效：标签未按升序排列
+Invalid time point.	时间点无效。
+Invalid uncompressed block size.	无效的未压缩块大小。
+Invalid uncompressed block size:	无效的未压缩块大小：
+Invalid uncompressed item size:	无效的未压缩项大小：
+Invalid VariableOrder basis function of order	无效的 VariableOrder 基函数，阶次：
+Invalid vector addition.	无效的向量加法。
+Invalid vector division.	无效的向量除法。
+Invalid vector length:	无效的向量长度：
+Invalid vector multiplication.	无效的向量乘法。
+Invalid vector subtraction.	无效的向量减法。
+Invalid vertical resolution:	无效的垂直分辨率：
+Invalid vertical YCbCr subsampling	无效的垂直 YCbCr 子采样
+Invalid view identifier:	无效的视图标识符：
+Invalid write operation in FITS file	FITS 文件中的写入操作无效
+Invalid XML declaration after the root element.	根元素之后出现无效的 XML 声明。
+Invalid YCbCr subsampling	无效的 YCbCr 子采样
+Invert cannot be executed on complex images.	Invert 无法在复数图像上执行。
+IO error writing directory	写入目录时发生 IO 错误
+IO error writing tag data	写入标签数据时发生 IO 错误
+IRAFGETC Cannot allocate memory for string variable	IRAFGETC：无法为字符串变量分配内存
+IRAFRHEAD: cannot get pos. in file:	IRAFRHEAD：无法获取文件位置：
+IRAFRHEAD: cannot seek in file:	IRAFRHEAD：无法在文件中定位：
+IRAFRHEAD: cannot seek to beginning of file:	IRAFRHEAD：无法定位到文件开头：
+IRAFRIMAGE: Cannot alloc memory for pixel header	IRAFRIMAGE：无法为像素头分配内存
+IRAFRIMAGE: Cannot open IRAF pixel file:	IRAFRIMAGE：无法打开 IRAF 像素文件：
+JasPer Library: Initialization error.	JasPer 库：初始化错误。
+JasPer: Unable to decode image	JasPer：无法解码图像
+KernelFilter: Invalid coefficient matrix in constructor.	KernelFilter：构造函数中的系数矩阵无效。
+LarsonSekanina cannot be executed on complex images.	LarsonSekanina 无法在复数图像上执行。
+LibRaw: Invalid postprocessed image format	LibRaw：后处理图像格式无效
+License activation failed.	许可证激活失败。
+Line length mismatch	行长度不匹配
+LinearFit cannot be executed on complex images.	LinearFit 无法在复数图像上执行。
+LocalHistogramEqualization cannot be executed on complex images.	LocalHistogramEqualization 无法在复数图像上执行。
+LocalNormalizationA cannot be executed on complex images.	LocalNormalizationA 无法在复数图像上执行。
+LocalNormalizationA cannot be executed on partial previews.	LocalNormalizationA 无法在部分预览图像上执行。
+LRGBCombination cannot be executed on complex images.	LRGBCombination 无法在复数图像上执行。
+LRGBCombination cannot be executed on grayscale images.	LRGBCombination 无法在灰度图像上执行。
+LRGBCombination: Incompatible source image geometry:	LRGBCombination：源图像几何不兼容：
+LRGBCombination: Invalid source color space:	LRGBCombination：无效的源色彩空间：
+LRGBCombination: Invalid source image:	LRGBCombination：无效的源图像：
+LRGBCombination: Source image not found:	LRGBCombination：未找到源图像：
+MaskedStretch cannot be executed on complex images.	MaskedStretch 无法在复数图像上执行。
+Maximum TIFF file size exceeded	超出 TIFF 文件最大尺寸
+MergeCFA: Incompatible source image	MergeCFA：源图像不兼容
+MergeCFA: Source image not found:	MergeCFA：未找到源图像：
+Merging common CCITT Fax codec-specific tags failed	合并 CCITT Fax 编解码器专用标签失败
+Merging Deflate codec-specific tags failed	合并 Deflate 编解码器专用标签失败
+Merging PixarLog codec-specific tags failed	合并 PixarLog 编解码器专用标签失败
+Merging Predictor codec-specific tags failed	合并 Predictor 编解码器专用标签失败
+Merging SGILog codec-specific tags failed	合并 SGILog 编解码器专用标签失败
+MetaModule: Module redefinition not allowed	MetaModule：不允许重新定义模块
+MetaParameter: Illegal null MetaProcess parent pointer	MetaParameter：非法的空 MetaProcess 父指针
+MetaParameter: Illegal null MetaTable parent pointer	MetaParameter：非法的空 MetaTable 父指针
+MetaProcess: invalid non-parameter child instance	MetaProcess：无效的非参数子实例
+MetaTable: Invalid non-parameter table column instance	MetaTable：无效的非参数表格列实例
+MetaTable: Nested tables not allowed	MetaTable：不允许嵌套表格
+Midtones balance out of range:	中间调平衡超出范围：
+Missing adaptive normalization location estimates.	缺少自适应归一化位置估计。
+Missing alignment matrix definition.	缺少对齐矩阵定义。
+Missing checksum algorithm:	缺少校验和算法：
+Missing colorSpace Image attribute: Assuming the grayscale color space.	缺少 colorSpace 图像属性：假定为灰度色彩空间。
+Missing data compression algorithm:	缺少数据压缩算法：
+Missing data subblock compressedSize attribute.	缺少数据子块的 compressedSize 属性。
+Missing data subblock uncompressedSize attribute.	缺少数据子块的 uncompressedSize 属性。
+Missing distortion model for one direction	缺少某个方向的畸变模型
+Missing encoded vector data in	缺少编码向量数据，位置：
+Missing high adaptive normalization scale factors.	缺少高区自适应归一化缩放因子。
+Missing high adaptive normalization zero offset coefficients.	缺少高区自适应归一化零偏系数。
+Missing Huffman code table entry	缺少霍夫曼编码表项
+Missing ICC profile data.	缺少 ICC 配置文件数据。
+Missing image data size attribute.	缺少图像数据大小属性。
+Missing image downsampledHeight attribute.	缺少图像的 downsampledHeight 属性。
+Missing image downsampledWidth attribute.	缺少图像的 downsampledWidth 属性。
+Missing image identifier	缺少图像标识符
+Missing image removedLayers attribute.	缺少图像的 removedLayers 属性。
+Missing image searchRadius attribute.	缺少图像的 searchRadius 属性。
+Missing image-to-native grid interpolation definition properties	缺少图像到原始网格插值定义属性
+Missing image-to-native surface spline definition properties	缺少图像到原始曲面样条定义属性
+Missing index numberOfExpansions attribute.	缺少索引的 numberOfExpansions 属性。
+Missing index position attribute.	缺少索引的 position 属性。
+Missing low adaptive normalization scale factors.	缺少低区自适应归一化缩放因子。
+Missing low adaptive normalization zero offset coefficients.	缺少低区自适应归一化零偏系数。
+Missing magnitudeRange attribute.	缺少 magnitudeRange 属性。
+Missing mandatory Data element.	缺少必需的 Data 元素。
+Missing Model blockSize attribute.	缺少 Model 的 blockSize 属性。
+Missing native-to-image grid interpolation definition properties	缺少原始到图像网格插值定义属性
+Missing native-to-image surface spline definition properties	缺少原始到图像曲面样条定义属性
+Missing nodeCount attribute.	缺少 nodeCount 属性。
+Missing object id attribute.	缺少天体 id 属性。
+Missing or incomplete data vectors.	数据向量缺失或不完整。
+Missing or incomplete local distortion model data.	局部畸变模型数据缺失或不完整。
+Missing or incongruent adaptive normalization coordinates.	自适应归一化坐标缺失或不相符。
+Missing or invalid master bias frame.	主偏置帧缺失或无效。
+Missing or invalid master dark frame.	主暗场帧缺失或无效。
+Missing or invalid master flat frame.	主平场帧缺失或无效。
+Missing or invalid X-Trans CFA pattern description property.	X-Trans CFA 阵列模式描述属性缺失或无效。
+Missing parameters Data element attribute:	缺少 parameters Data 元素属性：
+Missing preview identifier	缺少预览标识符
+Missing property id attribute.	缺少 property id 属性。
+Missing radial basis function.	缺少径向基函数。
+Missing rejection map channel data.	缺少剔除图通道数据。
+Missing rejection map width attribute.	缺少剔除图的 width 属性。
+Missing required AlignmentRecursiveSplines element.	缺少必需的 AlignmentRecursiveSplines 元素。
+Missing required AlignmentSplineX and AlignmentSplineY elements.	缺少必需的 AlignmentSplineX 和 AlignmentSplineY 元素。
+Missing required DFT metadata:	缺少必需的 DFT 元数据：
+Missing required epoch database field.	缺少必需的历元数据库字段。
+Missing required epoch field description.	缺少必需的历元字段说明。
+Missing required LocalNormalization element.	缺少必需的 LocalNormalization 元素。
+Missing required LocationEstimates element.	缺少必需的 LocationEstimates 元素。
+Missing required orbital element database fields.	缺少必需的轨道根数数据库字段。
+Missing required ReferenceGeometry element.	缺少必需的 ReferenceGeometry 元素。
+Missing required ReferenceLocation element.	缺少必需的 ReferenceLocation 元素。
+Missing required SourceImage element.	缺少必需的 SourceImage 元素。
+Missing required state vector component database fields.	缺少必需的状态向量分量数据库字段。
+Missing required surface spline Coefficients child element.	缺少必需的曲面样条 Coefficients 子元素。
+Missing required surface spline Serialization child element.	缺少必需的曲面样条 Serialization 子元素。
+Missing required sync data list.	缺少必需的同步数据列表。
+Missing required sync data point.	缺少必需的同步数据点。
+Missing required TimeSpan element.	缺少必需的 TimeSpan 元素。
+Missing required tokens in CSV database format: got	CSV 数据库格式中缺少必需的字段：实际得到
+Missing subblock uncompressedSize attribute.	缺少子块的 uncompressedSize 属性。
+Missing surface spline definition properties	缺少曲面样条定义属性
+Missing surface spline node coordinates	缺少曲面样条节点坐标
+Missing surface spline NodeXCoordinates child element.	缺少曲面样条 NodeXCoordinates 子元素。
+Missing surface spline NodeYCoordinates child element.	缺少曲面样条 NodeYCoordinates 子元素。
+Missing time span end attribute.	缺少时间跨度的 end 属性。
+Missing width ColorFilterArray attribute.	缺少 ColorFilterArray 的 width 属性。
+MorphologicalTransformation cannot be executed on complex images.	MorphologicalTransformation 无法在复数图像上执行。
+MultiscaleAdaptiveStretch cannot be executed on complex images.	MultiscaleAdaptiveStretch 无法在复数图像上执行。
+MultiscaleGradientCorrection cannot be executed on complex images.	MultiscaleGradientCorrection 无法在复数图像上执行。
+MultiscaleGradientCorrection cannot be executed on partial previews.	MultiscaleGradientCorrection 无法在部分预览图像上执行。
+MultiscaleLinearTransform cannot be executed on complex images.	MultiscaleLinearTransform 无法在复数图像上执行。
+MultiscaleMedianTransform cannot be executed on complex images.	MultiscaleMedianTransform 无法在复数图像上执行。
+Multisegment or Inverted parametric curves cannot be written	无法写入多段或反向参数曲线
+Must be an instance of either HistogramTransformation or ScreenTransferFunction.	必须是 HistogramTransformation 或 ScreenTransferFunction 的实例。
+Must be an instance of either ScreenTransferFunction or HistogramTransformation.	必须是 ScreenTransferFunction 或 HistogramTransformation 的实例。
+Must specify just one or all indices for vector	向量的索引必须指定单个或全部
+NarrowbandNormalization cannot be executed on complex images.	NarrowbandNormalization 无法在复数图像上执行。
+Negative value is illegal	不允许负值
+No error detected	未检测到错误
+No space for LZW code table	LZW 编码表空间不足
+No space for LZW hash table	LZW 哈希表空间不足
+No space for LZW state block	LZW 状态块空间不足
+No space for output buffer	输出缓冲区空间不足
+No space for PixarLog state block	PixarLog 状态块空间不足
+No space for SGILog translation buffer	SGILog 转换缓冲区空间不足
+No space for state block	状态块空间不足
+No space for strip buffer	条带缓冲区空间不足
+No space for tile buffer	瓦片缓冲区空间不足
+No space for ZIP state block	ZIP 状态块空间不足
+No space to expand strip arrays	扩展条带数组的空间不足
+No such defect map image:	找不到指定的缺陷图图像：
+No such directory:	找不到指定的目录：
+No such file exists on the local filesystem:	本地文件系统中不存在该文件：
+No such file or directory	找不到文件或目录
+No such file:	找不到指定的文件：
+No such reference view:	找不到指定的参考视图：
+No such view:	找不到指定的视图：
+NoiseGenerator cannot be executed on complex images.	NoiseGenerator 无法在复数图像上执行。
+Non-parametric arguments are not allowed	不允许非参数化参数
+Not enough	不足
+Not enough memory	内存不足
+Not implemented yet	尚未实现
+Numeric argument out of range:	数值参数超出范围：
+Numerical argument out of range:	数值参数超出范围：
+Numerical overflow while converting expression to necessary datatype	将表达式转换为所需数据类型时发生数值溢出
+Offset argument must be a constant integer	偏移参数必须是常量整数
+ONNX Runtime error:	ONNX Runtime 错误：
+Operation made no progress over multiple calls, due to input being empty	由于输入为空，多次调用仍未取得进展
+Out of range argument to arccos	arccos 的参数超出范围
+Out of range argument to arcsin	arcsin 的参数超出范围
+Out of range argument to log	log 的参数超出范围
+Out of range argument to sqrt	sqrt 的参数超出范围
+P variable length column descriptor is out of range	P 变长列描述符超出范围
+Parsing Boolean expression: empty string	解析布尔表达式：字符串为空
+Parsing Boolean expression: invalid Boolean literal:	解析布尔表达式：无效的布尔字面量：
+Parsing integer expression: conversion error	解析整数表达式：转换错误
+Parsing integer expression: empty string	解析整数表达式：字符串为空
+Parsing real numeric list: invalid separator specified	解析实数列表：指定的分隔符无效
+Parsing real numeric list: too many items: expected a maximum of	解析实数列表：项数过多：最多允许
+Parsing unsigned integer expression: conversion error	解析无符号整数表达式：转换错误
+Parsing unsigned integer expression: empty string	解析无符号整数表达式：字符串为空
+Parsing xdrz RejectionMap ChannelData element: Invalid channel data size: Expected	解析 xdrz 剔除图 ChannelData 元素：无效的通道数据大小：应为
+Peak errors:	峰值误差：
+Photometric tag is missing, assuming data is YCbCr	缺少光度标签，假定数据为 YCbCr
+PhotometricColorCalibration cannot be executed on complex images.	PhotometricColorCalibration 无法在复数图像上执行。
+PhotometricColorCalibration cannot be executed on previews.	PhotometricColorCalibration 无法在预览图像上执行。
+PixelMath: Unable to create destination image window.	PixelMath：无法创建目标图像窗口。
+Pointing model: file name is empty.	指向模型：文件名为空。
+POST operation failed:	POST 操作失败：
+Premature end of input file	输入文件提前结束
+Premature end of JPEG file	JPEG 文件提前结束
+Premature EOL	行结束符提前出现
+Preview identifiers not allowed	不允许使用预览标识符
+Preview not found	未找到预览
+Process: Empty process identifier specified	Process：指定的进程标识符为空
+ProcessParameter: Empty process parameter identifier specified	ProcessParameter：指定的进程参数标识符为空
+ProcessParameter: Empty table column parameter identifier specified	ProcessParameter：指定的表格列参数标识符为空
+ProcessParameter: Internal error: Invalid process handle	ProcessParameter：内部错误：无效的进程句柄
+RangeSelection cannot be executed on complex images.	RangeSelection 无法在复数图像上执行。
+Read error	读取错误
+Read failed on temporary file	读取临时文件失败
+Read from EMS failed	从 EMS 读取失败
+Read from XMS failed	从 XMS 读取失败
+RecursivePointSurfaceSpline: At least three input nodes must be specified.	RecursivePointSurfaceSpline：必须至少指定三个输入节点。
+RecursivePointSurfaceSpline: Invalid derivative order.	RecursivePointSurfaceSpline：无效的导数阶次。
+Reference image not found:	未找到参考图像：
+Required local normalization data not available:	所需的局部归一化数据不可用：
+Resample cannot be executed on previews.	Resample 无法在预览图像上执行。
+Rescale cannot be executed on complex images.	Rescale 无法在复数图像上执行。
+RestorationFilter cannot be executed on complex images.	RestorationFilter 无法在复数图像上执行。
+RGBWorkingSpace cannot be executed on previews.	RGBWorkingSpace 无法在预览图像上执行。
+RMS error deviation:	RMS 误差偏差：
+Root mean square error:	均方根误差：
+Rotation cannot be executed on previews.	Rotation 无法在预览图像上执行。
+SampleFormatConversion cannot be executed on previews.	SampleFormatConversion 无法在预览图像上执行。
+Samples per pixel is zero	每像素采样数为零
+Sampling factors too large for interleaved scan	交织扫描的采样因子过大
+Sandbox cannot be executed on complex images.	Sandbox 无法在复数图像上执行。
+Sanity check on directory count failed	目录计数完整性检查失败
+Sanity check on directory count failed, this is probably not a valid IFD offset	目录计数完整性检查失败，这很可能不是有效的 IFD 偏移
+Sanity check on directory count failed, zero tag directories not supported	目录计数完整性检查失败，不支持零标签目录
+Sanity check on tag count failed, likely corrupt TIFF	标签计数完整性检查失败，TIFF 可能已损坏
+SAO Image Function not supported	不支持 SAO Image 功能
+SCNR cannot be executed on complex images.	SCNR 无法在复数图像上执行。
+SCNR cannot be executed on grayscale images.	SCNR 无法在灰度图像上执行。
+Seek error	定位错误
+Seek error; probably corrupted file	定位错误；文件可能已损坏
+Seek failed on temporary file	在临时文件上定位失败
+SETNULL first argument must be a scalar constant	SETNULL 的第一个参数必须是标量常量
+Setting up field info failed	设置字段信息失败
+Settings: Error removing global settings key	Settings：删除全局设置键时出错
+Settings: Error removing local settings key	Settings：删除局部设置键时出错
+Settings: Error setting global key access	Settings：设置全局键访问权限时出错
+Settings: Error writing global boolean data	Settings：写入全局布尔数据时出错
+Settings: Error writing global ByteArray data	Settings：写入全局 ByteArray 数据时出错
+Settings: Error writing global floating point data	Settings：写入全局浮点数据时出错
+Settings: Error writing global integer data	Settings：写入全局整数数据时出错
+Settings: Error writing global String data	Settings：写入全局字符串数据时出错
+Settings: Error writing global unsigned integer data	Settings：写入全局无符号整数数据时出错
+Settings: Error writing local boolean data	Settings：写入局部布尔数据时出错
+Settings: Error writing local ByteArray data	Settings：写入局部 ByteArray 数据时出错
+Settings: Error writing local floating point data	Settings：写入局部浮点数据时出错
+Settings: Error writing local integer data	Settings：写入局部整数数据时出错
+Settings: Error writing local String data	Settings：写入局部字符串数据时出错
+Settings: Error writing local unsigned integer data	Settings：写入局部无符号整数数据时出错
+SGILog compression cannot handle non-contiguous data	SGILog 压缩无法处理非连续数据
+Shadows range expansion out of range:	阴影范围扩展超出范围：
+SharedPixelData: Incompatible shared image format	SharedPixelData：共享图像格式不兼容
+SharedPixelData: Shared complex images are not supported by this version of PCL	SharedPixelData：此版本的 PCL 不支持共享复数图像
+SimplexNoise cannot be executed on complex images.	SimplexNoise 无法在复数图像上执行。
+Smoothing not supported with nonstandard sampling ratios	非标准采样比不支持平滑
+SolarToolbox cannot be executed on complex images.	SolarToolbox 无法在复数图像上执行。
+Source image not found:	未找到源图像：
+Specified maxSymbolValue is too small	指定的 maxSymbolValue 过小
+SpectrophotometricColorCalibration cannot be executed on complex images.	SpectrophotometricColorCalibration 无法在复数图像上执行。
+SpectrophotometricColorCalibration cannot be executed on previews.	SpectrophotometricColorCalibration 无法在预览图像上执行。
+SpectrophotometricFluxCalibration cannot be executed on complex images.	SpectrophotometricFluxCalibration 无法在复数图像上执行。
+SpectrophotometricFluxCalibration cannot be executed on previews.	SpectrophotometricFluxCalibration 无法在预览图像上执行。
+SplitCFA cannot be executed on complex images.	SplitCFA 无法在复数图像上执行。
+StarAlignment cannot be executed on complex images.	StarAlignment 无法在复数图像上执行。
+StarMask cannot be executed on complex images.	StarMask 无法在复数图像上执行。
+SubframeSelector: Approval error: Invalid script execution.	SubframeSelector：批准时出错：脚本执行无效。
+SubframeSelector: Weighting error: Invalid script execution.	SubframeSelector：加权时出错：脚本执行无效。
+Superbias cannot be executed on complex images.	Superbias 无法在复数图像上执行。
+Superbias: Unable to create output image window.	Superbias：无法创建输出图像窗口。
+Suspension not allowed here	此处不允许挂起
+Syntax error in columns specifier in input URL:	输入 URL 中的列说明符语法错误：
+Target median value out of range:	目标中值超出范围：
+Tell error; probably corrupted file	定位错误；文件可能已损坏
+TGVDenoise cannot be executed on complex images.	TGVDenoise 无法在复数图像上执行。
+TGVInpaint cannot be executed on complex images.	TGVInpaint 无法在复数图像上执行。
+TGVInpaint: Missing inpainting mask identifier	TGVInpaint：缺少修补蒙版标识符
+The background reference view must be a color image:	背景参考视图必须是彩色图像：
+The following keyword is too long to fit on a card:	以下关键字过长，无法容纳于卡片中：
+The keyword name cannot be empty.	关键字名称不能为空。
+The object and origin identifiers must be different.	天体标识符与原点标识符必须不同。
+The reference image cannot be a partial preview:	参考图像不能是部分预览：
+The reference image has an invalid astrometric solution:	参考图像的天体测量解无效：
+The target image has an invalid astrometric solution:	目标图像的天体测量解无效：
+The white reference view must be a color image:	白参考视图必须是彩色图像：
+This implementation of PixelMath cannot be executed on complex images.	此 PixelMath 实现无法在复数图像上执行。
+This mode cannot generate an uncompressed block	此模式无法生成未压缩块
+This PixelMath instance cannot be executed on previews.	此 PixelMath 实例无法在预览图像上执行。
+TIFF Error:	TIFF 错误：
+Tile length is zero	瓦片长度为零
+Tile width is zero	瓦片宽度为零
+Time point out of range:	时间点超出范围：
+Too few data; probably corrupted profile	数据过少；配置文件可能已损坏
+Too few TransferFunctions provided. Tag not written to file	提供的 TransferFunctions 过少。标签未写入文件
+Too many immediate symbol value components:	立即数符号值分量过多：
+Too many input bytes provided	提供的输入字节过多
+Translation buffer too short	转换缓冲区过短
+Transparency value out of range:	透明度值超出范围：
+Unable to access the current FITS HDU	无法访问当前的 FITS HDU
+Unable to access the primary FITS HDU	无法访问主 FITS HDU
+Unable to allocate memory for row selection	无法为行选择分配内存
+Unable to cfreate a working image	无法创建工作图像
+Unable to close file:	无法关闭文件：
+Unable to create a working image	无法创建工作图像
+Unable to create directory:	无法创建目录：
+Unable to create file:	无法创建文件：
+Unable to create image FITS HDU	无法创建图像 FITS HDU
+Unable to create image window:	无法创建图像窗口：
+Unable to create image window: large-scale deringing support	无法创建图像窗口：大尺度去振铃支持
+Unable to create image window: stars	无法创建图像窗口：星点
+Unable to create primary FITS HDU	无法创建主 FITS HDU
+Unable to delete file:	无法删除文件：
+Unable to determine a default blue filter	无法确定默认蓝光滤镜
+Unable to determine a default device QE curve	无法确定默认设备 QE 曲线
+Unable to determine a default green filter	无法确定默认绿光滤镜
+Unable to determine a default luminance filter	无法确定默认亮度滤镜
+Unable to determine a default red filter	无法确定默认红光滤镜
+Unable to determine a default white reference	无法确定默认白参考
+Unable to determine a distortion map file name:	无法确定畸变图文件名：
+Unable to determine a mask file name:	无法确定蒙版文件名：
+Unable to determine an output directory:	无法确定输出目录：
+Unable to determine an output file name:	无法确定输出文件名：
+Unable to find a valid distortion model.	找不到有效的畸变模型。
+Unable to find an initial linear transformation.	找不到初始线性变换。
+Unable to get file system information:	无法获取文件系统信息：
+Unable to load ICC profile:	无法加载 ICC 配置文件：
+Unable to load the default ICC profile:	无法加载默认 ICC 配置文件：
+Unable to move or rename file:	无法移动或重命名文件：
+Unable to open file:	无法打开文件：
+Unable to read the source image.	无法读取源图像。
+Unable to remove directory:	无法删除目录：
+Unable to set file attributes:	无法设置文件属性：
+Unable to set file permissions:	无法设置文件权限：
+Unable to set file times:	无法设置文件时间：
+Unknown error while loading the inference engine.	加载推理引擎时发生未知错误。
+UnsharpMask cannot be executed on complex images.	UnsharpMask 无法在复数图像上执行。
+Unspecified error code	未指定的错误码
+Unsupported binary serialization version.	不支持的二进制序列化版本。
+Unsupported center declination coordinate for	不支持的参考中心赤纬坐标：
+Unsupported color conversion request	不支持的颜色转换请求
+Unsupported combination of parameters	不支持的参数组合
+Unsupported floating-point sample type:	不支持的浮点采样类型：
+Unsupported frame parameter	不支持的帧参数
+Unsupported integer sample type:	不支持的整数采样类型：
+Unsupported parameter	不支持的参数
+Unsupported parametric curve	不支持的参数曲线
+Unsupported PCL swap image file version:	不支持的 PCL 交换图像文件版本：
+Unsupported radial basis function for standard serialization	标准序列化不支持该径向基函数
+Unsupported radial basis function type	不支持的径向基函数类型
+Unsupported raster format	不支持的栅格格式
+Unsupported serialization version.	不支持的序列化版本。
+Unsupported TIFF color space: Must be either grayscale or RGB color	不支持的 TIFF 色彩空间：必须是灰度或 RGB 彩色
+Using code not yet in table	使用了尚未加入编码表的编码
+Version not supported	不支持的版本
+Warm-up engine failed:	预热引擎失败：
+Width overflow	宽度溢出
+Wildcards not allowed	不允许使用通配符
+Write to EMS failed	写入 EMS 失败
+Write to XMS failed	写入 XMS 失败
+X-Trans interpolation: Invalid CFA data	X-Trans 插值：无效的 CFA 数据
+X-Trans interpolation: Invalid X-Trans CFA pattern	X-Trans 插值：无效的 X-Trans CFA 阵列模式
+You must specify an output directory.	必须指定输出目录。
+Zero or insignificant second input center value.	第二个输入中心值为零或过小。
+Zero strips per image	每幅图像的条带数为零
+Zero tiles	瓦片数为零
+ZLib cannot deal with buffers this size	ZLib 无法处理此尺寸的缓冲区
+Ask on out-of-range read values	读取值越界时询问
+Attempt to read past end of table	尝试读取超出表格末尾
+Dimensions of ANGSEP arguments are not compatible	ANGSEP 参数的维度不兼容
+Dimensions of BOX or ELLIPSE arguments are not compatible	BOX 或 ELLIPSE 参数的维度不兼容
+Dimensions of CIRCLE arguments are not compatible	CIRCLE 参数的维度不兼容
+Dimensions of DEFNULL arguments are not compatible	DEFNULL 参数的维度不兼容
+Dimensions of NEAR arguments are not compatible	NEAR 参数的维度不兼容
+Dimensions of REGFILTER arguments are not compatible	REGFILTER 参数的维度不兼容
+EXTVER of Group containing this HDU	此 HDU 所属组的 EXTVER
+IRAF header file name	IRAF 文件头文件名
+Identifier of image extension HDU	图像扩展 HDU 的标识符
+Identifier of primary image HDU	主图像 HDU 的标识符
+Normalize to the default input range	归一化到默认输入范围
+Null encountered as vector index	向量索引中出现空值
+Output table has different row length from input	输出表的行长与输入不一致
+Rescale image to the specified range	将图像重新缩放到指定范围
+Signed integer images store physical pixel data	有符号整数图像存储物理像素数据
+Software that created this file	创建此文件的软件
+The FITS file contains no image HDU	FITS 文件不包含图像 HDU
+The FITS file contains no readable image	FITS 文件不包含可读图像
+This implementation does not support complex FITS images	此实现不支持复数 FITS 图像
+Use ROWORDER keywords	使用 ROWORDER 关键字
+Write scaling keywords to signed integer images	向有符号整数图像写入缩放关键字
+Wrong number of parameters found for region	区域参数数量不正确
+Didn't expect more than one scan	不期望出现多个扫描
+End Of Image	图像结束
+Image too wide for this implementation	图像宽度超出此实现的限制
+JPEG datastream contains no image	JPEG 数据流不包含图像
+PixInsight Standard JPEG File Format Module	PixInsight 标准 JPEG 文件格式模块
+Requested feature was omitted at compile time	请求的功能在编译时已被省略
+Scan script does not transmit all data	扫描脚本未传输全部数据
+Virtual array controller messed up	虚拟数组控制器状态异常
+Adobe Photoshop Document Data Block	Adobe Photoshop 文档数据块
+Compression algorithm does not support random access	压缩算法不支持随机访问
+File opened in read-only mode	文件以只读模式打开
+GDAL Metadata	GDAL 元数据
+GDAL NoDataValue	GDAL 无效值
+No support for converting user data format to LogL	不支持将用户数据格式转换为 LogL
+No support for converting user data format to LogLuv	不支持将用户数据格式转换为 LogLuv
+Old-style JPEG	旧式 JPEG
+PixInsight Standard TIFF File Format Module	PixInsight 标准 TIFF 文件格式模块
+Too much	过多
+FITS Format Hints              Description	FITS 格式提示              说明
+TIFF Format Hints             Description	TIFF 格式提示             说明
+JPEG Format Hints             Description	JPEG 格式提示             说明

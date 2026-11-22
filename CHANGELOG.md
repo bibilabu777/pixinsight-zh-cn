@@ -1,5 +1,36 @@
 # 更新日志
 
+## v1.3.0 — 2026-11-22
+
+### 新增
+- **错误与校验消息汉化 907 条**，词典从 24,604 条增至 **25,817 条**（5.14 MB）。
+  这批词条是 PI 出错时真正弹给用户看的文本，此前几乎全是英文：
+  - **PCL 核心错误池 861 条**：`Unable to open file:`、`Cannot read TIFF header`、
+    `No space for LZW code table`、`Missing or invalid master dark frame.`、
+    `Invalid image width:`、`Corrupt JPEG data: bad Huffman code`、
+    `Settings: Error writing global integer data`、`Tile length is zero` 等。
+  - **文件格式库补充 43 条**：`The FITS file contains no readable image`、
+    `This implementation does not support complex FITS images`、`Old-style JPEG`、
+    `GDAL Metadata`、`PixInsight Standard TIFF File Format Module` 等。
+  - **格式提示表头 3 条**：`FITS / TIFF / JPEG Format Hints … Description`，按原空格数对齐。
+
+### 修复
+- **36 条历史无效条目**，它们在 v1.2.1 里从未生效：
+  - **15 条键带前导空格**（`L-band 546.0 nm`、`Scale rejection`、`~300 nm L-bandwidth` 等）。
+    加载器 `builddict()` 会剥掉行首空白，这些键永远查不到。已去掉前导空格。
+  - **19 条尾随空格与不带空格版本重复**（`Same as source ` / `Same as source` 等）。
+    加载器剥尾空格后第二条被静默丢弃。已统一保留不带空格的版本——loader 本身有
+    尾部空白回退，带空格的那份是多余的。
+  - **1 条键以 `#` 开头**（`# | Session`），被加载器当注释行跳过，已删除。
+
+### 校验
+- 格式：UTF-8 BOM 保留 · 25,817 行全 CRLF · 制表符每行 1 个 · 空键空值 0 · 重复键 0 ·
+  行首 `#` 0 · 前导空格 0。
+- 按 `src/pi_zh.cpp` 中 `builddict()` 的解析规则做模拟加载：**25,817 / 25,817 全部可加载，
+  冲突丢弃 0**（覆盖率 100%）。
+- 61 条短键（`Not enough`、`Cannot read`、`Read error` 等）逐一核对：`findkey()` 是
+  整串精确匹配（长度相等 + `memcmp`），不存在把长句拆坏的风险。
+
 ## v1.2.1 — 2026-11-22
 
 ### 变更

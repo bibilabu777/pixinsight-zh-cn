@@ -6,7 +6,7 @@
 
 项目主页：<https://github.com/bibilabu777/pixinsight-zh-cn>
 
-当前版本：**v1.2.1**　词典 **24,603 条**　适配 **PixInsight 1.9.6 / Windows Qt6 x64**
+当前版本：**v1.3.0**　词典 **25,817 条**　适配 **PixInsight 1.9.6 / Windows Qt6 x64**
 
 > **测试状态**：目前仅在 **PixInsight 1.9.6** 和 **1.9.5**（Windows / Qt6 x64）上实测通过；其他版本请自行测试。
 
