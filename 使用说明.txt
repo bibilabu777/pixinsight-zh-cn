@@ -42,7 +42,7 @@
 --------------------------------
 pi_zh_loader.exe   启动器：启动 PixInsight 并注入汉化模块
 pi_zh.dll          汉化模块：运行时替换界面文本
-zh_cn.tsv          外置词典：英文原文 <TAB> 中文译文（25,817 条，约 5.1 MB）
+zh_cn.tsv          外置词典：英文原文 <TAB> 中文译文（25,915 条，约 5.15 MB）
 pi_zh.log          运行日志（注入结果、词典加载条数、自检）
 loader.log         启动日志（进程、注入、工作流）
 使用说明.txt       本文件
@@ -152,6 +152,21 @@ DLL 挂钩 Qt6 的文本显示接口，在绘制/赋值瞬间把英文换成中�
 
 十、更新日志
 ------------
+2026-11-24  修换行标签 + 补界面文案（v1.3.1，词典 25,915 条）
+  · 修复一批「原文带真换行」的标签：ContinuumSubtraction 的
+    RGB view or / red channel view、Narrowband view or / Ha view，
+    CombineRGBAndNarrowband 的 Narrowband Red / or NB Color，以及 BPP
+    文件列表的多行表头（Overscan Info / Optimize Dark / CFA Images 等）。
+    这类原文在脚本里是真换行，而词典里只有空格版，永远匹配不上。
+  · 修复 3 条键里把转义写成字面量的条目（Right Ascension / Declination /
+    Pixel Size 的 u2003 等），它们从未命中过。
+  · 9 条多行标签的译文改为单行：程序不会把译文里的 \n 还原成换行，
+    写进去会显示成反斜杠加 n（v1.3.0 的「焦距\nmm」即属此类）。
+  · 新增界面文案 98 条：对话框标题 27 条、参数标签与枚举 53 条、
+    短富文本提示 9 条、换行类 9 条。
+  · 新增查漏工具 src/tools/scan_js.py，可扫描脚本界面文案并核对词典。
+  · 本轮未改程序，bin/ 与 src/*.cpp 逐字节不变。
+
 2026-11-22  补齐错误提示（v1.3.0，词典 25,817 条）
   · 新增错误与校验消息 907 条：PCL 核心错误池 861 条、文件格式库补充 43 条、
     FITS/TIFF/JPEG 格式提示表头 3 条。
