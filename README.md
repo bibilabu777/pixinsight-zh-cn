@@ -6,7 +6,7 @@
 
 项目主页：<https://github.com/bibilabu777/pixinsight-zh-cn>
 
-当前版本：**v1.3.1**　词典 **25,915 条**　适配 **PixInsight 1.9.6 / Windows Qt6 x64**
+当前版本：**v1.3.2**　词典 **25,911 条**　适配 **PixInsight 1.9.6 / Windows Qt6 x64**
 
 > **测试状态**：目前仅在 **PixInsight 1.9.6** 和 **1.9.5**（Windows / Qt6 x64）上实测通过；其他版本请自行测试。
 
@@ -124,6 +124,7 @@ python src/build.py
 - 键里不能放真实换行，需要换行写成字面 `\n`（两个字符）。
 - **译文里不要写 `\n`**：DLL 只把键里的 `\n` 还原用于匹配，不会把值里的 `\n` 还原成换行，写进去就会在界面显示成反斜杠加 n。多行标签请写单行译文。
 - 同一英文原文只保留**第一次**出现的那条，重复键后者无效——想改某条译文请就地修改，追加是没用的。
+- **会被程序读回的文本不要译**：脚本里 `combo.addItem("Strong")` 之后若又 `engine.mode = this.itemText(i)` 并 `if (this.mode == "Strong")`，那么把 `Strong` 译成中文就等于把逻辑常量改了，功能会静默失效。这类字符串用 `--readback` 先查，确认后再决定。
 
 ### 查漏（扫描未汉化的界面文案）
 
@@ -135,6 +136,14 @@ python src/tools/scan_js.py "<PI根目录>\src\scripts" --dict zh_cn.tsv
 
 输出每行为 `文件:行号<TAB>英文原文`，可直接对照补词条；词条格式与去重规则同上一节。
 
+补汉化之前，建议先跑一次**回读冲突审计**——它会列出「下拉项被词典翻译、但脚本又把该项文本读回来做比较」的位置（当前 PI 1.9.6 全量扫描为 321 处 / 28 个文件，含表头等误报）：
+
+```bat
+python src/tools/scan_js.py "<PI根目录>\src\scripts" --dict zh_cn.tsv --readback
+```
+
+命中的词条应从词典**撤回**，否则脚本逻辑会因文本被改写而失效。
+
 ---
 
 ## 已知限制
@@ -144,6 +153,7 @@ python src/tools/scan_js.py "<PI根目录>\src\scripts" --dict zh_cn.tsv
 | 左侧栏 `Process Explorer / Format Explorer / Object Explorer / Script Editor / History Explorer / File Explorer` 仍为英文 | 这 6 个字符串词典里都有，但 PI 核心通过一张**私有函数指针表**（3164 项）调用 Qt，不走导入表，DLL 现有钩子覆盖不到 | 需要重编 DLL 增加对该指针表的扫描，属于改源码范畴，本版未做 |
 | 少数按钮文本仍是英文 | 运行时字符串两侧带空格（如 ` Auto Stretch `），而词典加载时会裁掉键首空格，永远命中不了 | 需改 DLL 的键裁剪逻辑 |
 | 部分长帮助段落仍是英文 | 运行期由 `字面量 + VERSION + 字面量` 拼成，拼完的整串无法预知 | 无法用词典覆盖 |
+| 脚本里少数下拉项仍是英文（如 Star Reduction 的 `Strong / Moderate / Soft`、`Reduction method` 四项） | 这些下拉项的文本会被脚本**读回**再与英文常量比较（`engine.method = this.itemText(index)` 后 `if (this.method == "Star Method")`）。词典在 `addItem` 入口替换的是控件里的模型文本，`itemText()` 于是返回中文，比较必然落空，脚本静默失效 | 翻译即破坏功能，按规则**不译**；根治需改脚本按索引取值，或用 `--readback` 查出后从词典撤回 |
 
 ---
 

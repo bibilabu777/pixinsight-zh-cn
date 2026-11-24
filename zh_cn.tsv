@@ -20419,10 +20419,6 @@ NB Colour Mapper	窄带色彩映射
 Image id	图像 ID
 Preview unavailable	预览不可用
 Star Reduction	星点缩减
-Transfer Method	传递方式
-Halo Method	光晕方式
-Star Method	星点方式
-Lightness Method	明度方式
 Will apply EZ Decon on image	将对图像应用 EZ 反卷积
 Evaluate EZ Decon Run	评估 EZ 反卷积运行
 Processing: ImageReader	正在处理: ImageReader

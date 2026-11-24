@@ -1,5 +1,41 @@
 # 更新日志
 
+## v1.3.2 — 2026-11-24
+
+### 修复
+- **撤回 4 条会破坏脚本功能的词条**：`Transfer Method` / `Halo Method` / `Star Method` /
+  `Lightness Method`（原译「传递方式 / 光晕方式 / 星点方式 / 明度方式」），词典
+  25,915 → **25,911 条**。
+
+  StarReduction 脚本把下拉项文本**读回来当逻辑常量**用：
+
+  ```js
+  this.selectMethodCombo.onItemSelected = function(index) {
+     this.dialog.engine.method = this.itemText(index);   // 读回显示文本
+  }
+  if (this.method == this.methods[0]) { ... }             // 与英文常量比较
+  ```
+
+  而 `pi_zh.dll` 的 `addItem` 钩子在**入口**替换文本，改写的是控件里的模型文本，
+  因此 `itemText()` 返回的是中文。译文一生效，四个算法分支全部不匹配，
+  PixelMath 表达式只剩 `Img1 = <view>;`，**星点缩减静默失效**（不报错、图像不变）。
+  实测确认：中文界面下该下拉框确实显示「星点方式」，故必须撤回。
+
+### 新增
+- **`scan_js.py --readback`**：审计「下拉项被词典翻译、但脚本又把该项文本读回来
+  做比较」的位置。PI 1.9.6 全量扫描结果为 **321 处 / 28 个文件**（含表头类误报），
+  明细可用该命令复现；后续补词条前应先跑一次，命中的条目一律不译。
+
+### 说明
+- 本次截图中的 `Strong / Moderate / Soft` 属同一类：`engine.mode` 同样来自
+  `itemText()`，且被 `if (this.mode != "Strong")` / `if (this.mode == "Soft")` 使用。
+  **不收录**，保持英文；若译成中文，三档会退化为同一档（Strength/Soft 差异消失）。
+- 该对话框要同时得到「中文显示 + 功能正确」，只能改脚本按索引取值
+  （`engine.method = this.methods[index]`），属改 PixInsight 原版文件，不在本项目范围内。
+- 本轮未改代码，`bin/` 与 `src/*.cpp` 逐字节不变，可直接覆盖安装。
+- 校验：25,911 行全 CRLF、BOM 保留、0 重复键、0 制表符异常；`SHA256SUMS.txt` 重算通过。
+
+
 ## v1.3.1 — 2026-11-24
 
 ### 新增

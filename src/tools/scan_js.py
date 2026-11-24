@@ -131,18 +131,47 @@ def scan_file(path, keys, only_ui=True):
     return miss
 
 
+def scan_readback(path, keys):
+    """找出「下拉项文本被词典翻译、但脚本又把它读回来做比较」的地方。
+
+    pi_zh.dll 在 addItem/insertItem 入口替换文本，改写的是控件里的**模型文本**，
+    因此 itemText(i) 拿到的就是中文。凡是脚本里 `engine.x = this.itemText(i)`
+    之后又跟 `if (x == "英文")` 比较的，一旦该项被翻译，比较必然落空。
+    这里只报「同一文件里出现 itemText( 且 addItem/数组字面量命中词典」的位置，
+    属启发式筛查，需人工确认；命中即应把这几个词条从词典撤回。
+    """
+    try:
+        src = open(path, 'r', encoding='utf-8', errors='replace').read()
+    except OSError:
+        return []
+    if 'itemText(' not in src:
+        return []
+    hits = []
+    for i, line in enumerate(src.splitlines(), 1):
+        code = line.split('//')[0]
+        if not re.search(r'addItem\s*\(|addItems\s*\(|=\s*\[\s*"', code):
+            continue
+        for m in LIT.finditer(code):
+            s = unescape(m.group(1))
+            if 2 <= len(s) <= 60 and re.search(r'[A-Za-z]', s) and s in keys:
+                hits.append((i, s))
+    return hits
+
+
 def main():
     args = [a for a in sys.argv[1:]]
     if not args:
         print(__doc__)
         return 2
     root = args[0]
-    dict_path, only_ui, total = 'zh_cn.tsv', True, 0
+    dict_path, only_ui, readback, total = 'zh_cn.tsv', True, False, 0
     for i, a in enumerate(args):
         if a == '--dict' and i + 1 < len(args):
             dict_path = args[i + 1]
         elif a == '--all':
             only_ui = False
+        elif a == '--readback':
+            readback = True
     if not os.path.isdir(root):
         print('目录不存在: %s' % root, file=sys.stderr)
         return 2
@@ -153,11 +182,16 @@ def main():
             if not fn.lower().endswith(('.js', '.jsh')):
                 continue
             p = os.path.join(dirpath, fn)
+            rel = os.path.relpath(p, root).replace('\\', '/')
+            if readback:
+                for ln, s in scan_readback(p, keys):
+                    print('%s:%d\t%s' % (rel, ln, s.replace('\t', ' ')))
+                    total += 1
+                continue
             for ln, s in scan_file(p, keys, only_ui):
-                rel = os.path.relpath(p, root).replace('\\', '/')
                 print('%s:%d\t%s' % (rel, ln, s.replace('\t', ' ')))
                 total += 1
-    print('未命中合计: %d' % total, file=sys.stderr)
+    print(('回读冲突' if readback else '未命中') + '合计: %d' % total, file=sys.stderr)
     return 0
 
 
