@@ -6,7 +6,7 @@
 
 项目主页：<https://github.com/bibilabu777/pixinsight-zh-cn>
 
-当前版本：**v1.3.0**　词典 **25,817 条**　适配 **PixInsight 1.9.6 / Windows Qt6 x64**
+当前版本：**v1.3.1**　词典 **25,915 条**　适配 **PixInsight 1.9.6 / Windows Qt6 x64**
 
 > **测试状态**：目前仅在 **PixInsight 1.9.6** 和 **1.9.5**（Windows / Qt6 x64）上实测通过；其他版本请自行测试。
 
@@ -98,6 +98,7 @@ bin/pi_zh_loader.exe   外挂启动器（注入 + 启动 PixInsight）
 src/pi_zh.cpp          注入模块源码
 src/loader.cpp         启动器源码
 src/build.py           构建脚本（MSVC x64）
+src/tools/scan_js.py   脚本界面文案扫描工具（核对词典覆盖、导出未命中清单）
 zh_cn.tsv              词典：英文原文 <TAB> 中文译文，UTF-8 BOM + CRLF
 install_gui.ps1        图形化安装器
 安装.bat               安装入口
@@ -121,7 +122,18 @@ python src/build.py
 
 - UTF-8 **带 BOM**、**CRLF** 换行、一行一条 `英文原文<TAB>中文译文`。
 - 键里不能放真实换行，需要换行写成字面 `\n`（两个字符）。
+- **译文里不要写 `\n`**：DLL 只把键里的 `\n` 还原用于匹配，不会把值里的 `\n` 还原成换行，写进去就会在界面显示成反斜杠加 n。多行标签请写单行译文。
 - 同一英文原文只保留**第一次**出现的那条，重复键后者无效——想改某条译文请就地修改，追加是没用的。
+
+### 查漏（扫描未汉化的界面文案）
+
+`src/tools/scan_js.py` 会遍历 PixInsight 的 JS 脚本目录，抽出界面字符串并按 DLL 的匹配链（精确 → 去尾空白 → 去尾冒号 → 去 `&` → 剥富文本标签 → 真换行转字面 `\n`）核对词典，输出未命中清单：
+
+```bat
+python src/tools/scan_js.py "<PI根目录>\src\scripts" --dict zh_cn.tsv
+```
+
+输出每行为 `文件:行号<TAB>英文原文`，可直接对照补词条；词条格式与去重规则同上一节。
 
 ---
 

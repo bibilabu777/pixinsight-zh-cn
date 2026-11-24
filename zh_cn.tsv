@@ -17601,7 +17601,7 @@ Result is NaN (Not a Number)	结果为 NaN（非数值）
 ResultFileWriter: No reference file.	ResultFileWriter：无参考文件。
 Reuse LN reference frames	复用 LN 参考帧
 Right Ascension (degrees)	赤经（度）
-Right Ascension\nh\u2003m\u2003s	赤经\n时 分 秒
+Right Ascension\nh m s	赤经 时 分 秒
 Right ascension of source image	源图像的赤经
 Right ascension of the center of the image (deg)	图像中心的赤经（度）
 Rotationally variable Star	自转变星
@@ -19045,10 +19045,10 @@ Shift + Click and Drag to define a reference point and radius to perform a Simba
 <p>Which property the eight colour sliders below adjust, exactly like Lightroom's Color Mixer tabs.</p><p><b>Hue</b> - shifts each colour toward its neighbours without changing how bright or saturated it is. <b>Saturation</b> - makes that colour more or less vivid; at -100 it goes fully neutral. <b>Luminance</b> - brightens or darkens only the pixels of that colour, keeping the hue.</p><p>All three sets of values are kept, so you can switch freely between them.</p>	<p>下方八个颜色滑块所调整的属性，与 Lightroom 的颜色混合器选项卡完全一致。</p><p><b>色相</b> —— 把每种颜色向相邻颜色偏移，而不改变其明暗或饱和度。<b>饱和度</b> —— 使该颜色更鲜艳或更平淡；取 -100 时完全变为中性。<b>亮度</b> —— 只提亮或压暗该颜色的像素，保持色相不变。</p><p>三组数值都会保留，因此您可以在它们之间自由切换。</p>
 Select how the result will be saved. This must be consistent with the way the process works.<br/><em>Keep resulting view on workspace</em> will copy the view with the mask (if required), apply the process and leave the view on the workspace.<br/><em>Save resulting view to file and close</em> will copy the view with the mask (if required), apply the process, save the resulting window to a new file and close it. This is useful with Blink.<br/><em>Keep resulting view as preview</em> works only on processes that update the source image, it will create a preview of the full image or a copy of the current preview (if a preview is selected) and apply the process ot it.	选择结果的保存方式。这必须与进程的工作方式一致。<br/><em>保留结果视图在工作区</em>会复制带蒙版的视图（如需要），应用进程并把该视图留在工作区。<br/><em>保存结果视图到文件并关闭</em>会复制带蒙版的视图（如需要），应用进程，把结果窗口保存为新文件并关闭。这对 Blink 很有用。<br/><em>保留结果视图为预览</em>仅对会更新源图像的进程有效，它会创建整幅图像的预览或当前预览的副本（若已选择预览），并对其应用该进程。
 An error occurred:\n	发生错误：\n
-Focal Length\nmm	焦距\nmm
+Focal Length\nmm	焦距 mm
 INI file contents:\n	INI 文件内容：\n
 NSG log file:\n	NSG 日志文件：\n
-Pixel Size\n\u03BCm	像素尺寸\nμm
+Pixel Size\nμm	像素尺寸 μm
 Target channel: %c	目标通道：%c
 add directory: <raw>	添加目录：<raw>
 add file: <raw>	添加文件：<raw>
@@ -25815,3 +25815,101 @@ Too much	过多
 FITS Format Hints              Description	FITS 格式提示              说明
 TIFF Format Hints             Description	TIFF 格式提示             说明
 JPEG Format Hints             Description	JPEG 格式提示             说明
+RGB view or\nred channel view:	RGB 视图或红色通道视图：
+Narrowband view or\nHa view:	窄带视图或 Ha 视图：
+Narrowband Red\nor NB Color:	窄带红或窄带配色：
+Overscan\nInfo	过扫描信息
+Optimize\nDark	优化暗场
+CFA\nImages	CFA 图像
+Cosmetic\nCorrection	坏点校正
+Fast\nIntegration	快速叠加
+Declination\n° ′ ″	赤纬 ° ′ ″
+Save Drawing	保存绘图
+Vizier Servers	Vizier 服务器
+Catalog Downloader	星表下载器
+Object Configuration	天体配置
+Add Layer	添加图层
+Preview Annotation	预览标注
+Select objects file path	选择天体文件路径
+Select working directory	选择工作目录
+Readout options	读数选项
+Image edit	图像编辑
+Parameter edit	参数编辑
+Control selector	控件选择器
+Launch Scriptlet	启动脚本片段
+Save Ephemerides	保存星历
+Select view	选择视图
+Save to	保存到
+Select Images	选择图像
+Manual Entry	手动输入
+Message node	消息节点
+Benchmark Report	基准测试报告
+Submit Benchmark	提交基准测试
+Select Libraries	选择库
+Select CSV	选择 CSV
+Select Output Directory for Intermediate Files	选择中间文件输出目录
+Tile Coordinates	分块坐标
+Cloud Connection	云连接
+Thank you for your help and support!	感谢您的帮助与支持！
+Write objects to a text file	将天体写入文本文件
+Search coordinates	搜索坐标
+Select a font family.	请选择字体族。
+Font size:	字号：
+X position:	X 位置：
+Y position:	Y 位置：
+Head:	箭头：
+beta:	β：
+Reverse:	反转：
+Tick size:	刻度尺寸：
+Distance:	距离：
+Magnitude:	星等：
+Proper motion (RA):	自行（赤经）：
+Proper motion (Dec):	自行（赤纬）：
+Proper motion (Direction):	自行（方向）：
+G magnitude:	G 星等：
+BP magnitude:	BP 星等：
+RP magnitude:	RP 星等：
+Red signal:	红色信号：
+Green signal:	绿色信号：
+Blue signal:	蓝色信号：
+Optimize Master Dark	优化主暗场
+Reset Engine	重置引擎
+Custom Frames	自定义帧
+Presets	预设
+Smart Report	智能报告
+Reset defaults	重置为默认值
+Update Worklist	更新任务列表
+Integrate registered images	叠加已配准图像
+Write registered images	写出已配准图像
+Operation of FITS keyword	FITS 关键字操作
+Export FITS.txt	导出 FITS.txt
+Synthetic keywords	合成关键字
+Export CSV	导出 CSV
+Save Plot	保存绘图
+Included star analysis	入选星点分析
+Signal evaluation	信号评估
+Star data	星点数据
+Total stars found in image:	图像中检测到的星点总数：
+No matching Gaia data found:	未找到匹配的 Gaia 数据：
+Missing required Gaia data:	缺少必需的 Gaia 数据：
+Excluded by filters:	被筛选条件排除：
+Excluded non-cluster members:	排除的非星团成员：
+Number of included stars:	入选星点数量：
+no weighting	无权重
+Resolution weights	分辨率权重
+not applicable	不适用
+disabled	已禁用
+canceling...	正在取消…
+running	运行中
+success	成功
+failed	失败
+canceled	已取消
+<p>Execute.</p>	<p>执行。</p>
+<p>Accept new parameters</p>	<p>接受新参数</p>
+<p>Close without accepting parameter changes</p>	<p>关闭且不应用参数更改</p>
+<p>Select colour dialog</p>	<p>打开颜色选择对话框</p>
+<b>Gaia data</b>	<b>Gaia 数据</b>
+<b>Image data</b>	<b>图像数据</b>
+<p>Length and width of the arrow head in pixels</p>	<p>箭头长度与宽度，单位为像素</p>
+<p>If checked plot higher values closer to the origin.</p>	<p>勾选后，数值越大越靠近原点绘制。</p>
+<p>Set as a proportion of the margin available for the relevant axis.</p>	<p>以相关坐标轴可用边距的比例设定。</p>

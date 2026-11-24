@@ -1,5 +1,62 @@
 # 更新日志
 
+## v1.3.1 — 2026-11-24
+
+### 新增
+- **界面文案补充 98 条**，词典从 25,817 条增至 **25,915 条**：
+  - 对话框标题/文件名框 **27 条**：`Catalog Downloader`、`Vizier Servers`、`Object Configuration`、
+    `Add Layer`、`Preview Annotation`、`Tile Coordinates`、`Benchmark Report`、`Manual Entry`、
+    `Select Libraries`、`Launch Scriptlet`、`Save Ephemerides` 等。
+  - 参数标签/复选框/枚举项 **53 条**：HR 图与星点数据面板的 `Distance:`、`Magnitude:`、
+    `Proper motion (RA|Dec|Direction):`、`G/BP/RP magnitude:`、`Red/Green/Blue signal:`，
+    BPP 的 `Optimize Master Dark`、`no weighting`、`Resolution weights`、`not applicable`、
+    `canceling...` / `running` / `success` / `failed` / `canceled`，
+    AnnotateImage 的 `Write objects to a text file`，以及 `Presets`、`Smart Report`、
+    `Export CSV`、`Save Plot`、`Update Worklist` 等。
+  - 短富文本提示 **9 条**：`<p>Execute.</p>`、`<p>Accept new parameters</p>`、
+    `<b>Gaia data</b>`、`<b>Image data</b>`、`<p>Select colour dialog</p>` 等。
+- **`src/tools/scan_js.py`**：界面文案扫描工具。遍历 PI 的 JS 脚本目录抽取界面字符串，
+  按 DLL 的匹配链（精确 → 去尾空白 → 去尾冒号 → 去 `&` → 剥富文本标签 → 真换行转字面 `\n`）
+  核对词典并输出未命中清单，用于每次 PI 升级或新装脚本后查漏。
+
+### 修复
+- **原文带真实换行的标签永远不翻译**（本次主要问题）。ContinuumSubtraction 的
+  `RGB view or\nred channel view:`、`Narrowband view or\nHa view:` 与
+  CombineRGBAndNarrowband 的 `Narrowband Red\nor NB Color:` 在脚本里是
+  **真换行**（`"RGB view or\nred channel view:"`），而词典里只有空格版本
+  （`RGB view or red channel view:`），二者永远不相等，界面上一直是英文。
+  已按词典规则以字面 `\n` 建键补齐。
+- **3 条键把转义写成了字面量**：`Right Ascension\nh\u2003m\u2003s`、
+  `Declination\n\u00B0\u2003\u2032\u2003\u2033`、`Pixel Size\n\u03BCm` 的键里存的是
+  反斜杠加 `u2003` 六个字符，而运行期是真正的 U+2003 全角空格，因此从未命中。
+  已改为真实字符，`Observation Time\nUTC` / `Focal Length\nmm` 保持原键。
+- **9 条多行标签的译文不再写 `\n`**：DLL 只把键里的字面 `\n` 还原用于匹配，
+  不会还原译文里的 `\n`（`qcache_str` 直接 `fromUtf8`），译文里写 `\n` 会在界面
+  显示成反斜杠加 n。这批标签（含 BPP 多行表头 `焦距\nmm` 等 4 条 v1.3.0 遗留）
+  统一改为单行译法，中文均能在原列宽内排下。
+
+### 校验
+- 格式：UTF-8 BOM 保留 · 25,915 行全 CRLF · 每行 1 个制表符 · 空键空值 0 · 重复键 0 ·
+  行首 `#` 0 · 前导空格 0 · 键/值均不含真实换行。
+- 按 `builddict()` 规则模拟加载：**25,915 / 25,915 全部可加载**；
+  最长键 3,873 字符，未触及 8,000 上限。
+- 逐条模拟 `T()` 匹配链验证：本轮涉及的 19 个运行期字符串（含 12 条换行类）
+  **全部命中**。
+- 实机加载日志（PixInsight 1.9.6）：`dict loaded: 25817 entries` →
+  本版应为 `25915 entries, 0 failed, skipped_long=0`。
+
+### 说明
+- 本轮未改代码，`bin/` 与 `src/*.cpp` 逐字节不变，可直接覆盖安装。
+- 扫描结论（`src/scripts` 全量未命中 1,642 条，工具口径同 `src/tools/scan_js.py`）：
+  - 本轮补齐 **98 条**。
+  - 剩余约 **240 条**仍需人工判断，主要集中在：`AutoPaletteStudio` 的约 30 条
+    英文长 tooltip（该脚本已有部分段落为中文，剩下的未译）、部分脚本的表格表头
+    与状态列文本（`Overscan\nInfo` 一类已处理，其余为运行时拼接）、以及
+    `* HA +`、`"/px`、`*master*` 这类拼接片段与单位符号——后者整串无法预知，
+    补了也不会被匹配，属噪声。
+  - 另有作者署名、版权、网址、算法标识符、控制台日志，按项目约定保留英文。
+
+
 ## v1.3.0 — 2026-11-22
 
 ### 新增
