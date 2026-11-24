@@ -131,79 +131,18 @@ def scan_file(path, keys, only_ui=True):
     return miss
 
 
-def scan_readback(path, keys):
-    """找出「下拉项文本被词典翻译、且**同一个下拉框**的文本被脚本读回」的位置。
-
-    pi_zh.dll 在 addItem/insertItem 入口替换文本，改写的是控件里的**模型文本**，
-    因此 itemText(i) 拿到的就是中文；脚本若把它当逻辑常量比较，功能必然失效。
-
-    误报控制：只关联三件事——
-      1) 哪些变量声明成了下拉框（`x = new ComboBox(`）；
-      2) 该下拉框装了哪些字面量（addItem("a") / insertItem(i,"a") /
-         addItem(ARR[i])，ARR 为字面量数组）；
-      3) 该下拉框的文本是否被读回（`x.itemText(`，或 `x.onItemSelected`
-         回调里出现 `itemText(`）。
-    三者同时成立、且字面量命中词典，才算一处回读冲突。用索引取值
-    （`engine.x = itemIndex`）的控件不会被报出。
-    """
-    try:
-        src = open(path, 'r', encoding='utf-8', errors='replace').read()
-    except OSError:
-        return []
-    if 'itemText(' not in src:
-        return []
-
-    lines = [l.split('//')[0] for l in src.splitlines()]
-    combos, arrays, readback = set(), {}, set()
-
-    for idx, code in enumerate(lines):
-        m = re.search(r'([A-Za-z_][\w]*)\s*=\s*new\s+ComboBox', code)
-        if m:
-            combos.add(m.group(1))
-        m = re.search(r'([A-Za-z_][\w]*)\s*=\s*\[\s*"', code)
-        if m:
-            arrays[m.group(1)] = [unescape(x) for x in LIT.findall(code)]
-        m = re.search(r'([A-Za-z_][\w]*)\.itemText\s*\(', code)
-        if m:
-            readback.add(m.group(1))
-        m = re.search(r'([A-Za-z_][\w]*)\.onItemSelected\s*=', code)
-        if m:
-            for nxt in lines[idx:idx + 12]:
-                if 'itemText(' in nxt:
-                    readback.add(m.group(1))
-                    break
-
-    if not readback:
-        return []
-
-    hits = []
-    for i, code in enumerate(lines, 1):
-        m = re.search(r'([A-Za-z_][\w]*)\.(?:addItem|insertItem|addItems|setItemText)\s*\(', code)
-        if not m or m.group(1) not in readback:
-            continue
-        lits = [unescape(x) for x in LIT.findall(code)]
-        for arr in re.findall(r'([A-Za-z_][\w]*)\s*\[', code):
-            lits.extend(arrays.get(arr, []))
-        for s in lits:
-            if 2 <= len(s) <= 60 and re.search(r'[A-Za-z]', s) and s in keys:
-                hits.append((i, s))
-    return hits
-
-
 def main():
     args = [a for a in sys.argv[1:]]
     if not args:
         print(__doc__)
         return 2
     root = args[0]
-    dict_path, only_ui, readback, total = 'zh_cn.tsv', True, False, 0
+    dict_path, only_ui, total = 'zh_cn.tsv', True, 0
     for i, a in enumerate(args):
         if a == '--dict' and i + 1 < len(args):
             dict_path = args[i + 1]
         elif a == '--all':
             only_ui = False
-        elif a == '--readback':
-            readback = True
     if not os.path.isdir(root):
         print('目录不存在: %s' % root, file=sys.stderr)
         return 2
@@ -214,16 +153,11 @@ def main():
             if not fn.lower().endswith(('.js', '.jsh')):
                 continue
             p = os.path.join(dirpath, fn)
-            rel = os.path.relpath(p, root).replace('\\', '/')
-            if readback:
-                for ln, s in scan_readback(p, keys):
-                    print('%s:%d\t%s' % (rel, ln, s.replace('\t', ' ')))
-                    total += 1
-                continue
             for ln, s in scan_file(p, keys, only_ui):
+                rel = os.path.relpath(p, root).replace('\\', '/')
                 print('%s:%d\t%s' % (rel, ln, s.replace('\t', ' ')))
                 total += 1
-    print(('回读冲突' if readback else '未命中') + '合计: %d' % total, file=sys.stderr)
+    print('未命中合计: %d' % total, file=sys.stderr)
     return 0
 
 
