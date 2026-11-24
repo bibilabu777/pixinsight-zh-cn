@@ -132,13 +132,19 @@ def scan_file(path, keys, only_ui=True):
 
 
 def scan_readback(path, keys):
-    """找出「下拉项文本被词典翻译、但脚本又把它读回来做比较」的地方。
+    """找出「下拉项文本被词典翻译、且**同一个下拉框**的文本被脚本读回」的位置。
 
     pi_zh.dll 在 addItem/insertItem 入口替换文本，改写的是控件里的**模型文本**，
-    因此 itemText(i) 拿到的就是中文。凡是脚本里 `engine.x = this.itemText(i)`
-    之后又跟 `if (x == "英文")` 比较的，一旦该项被翻译，比较必然落空。
-    这里只报「同一文件里出现 itemText( 且 addItem/数组字面量命中词典」的位置，
-    属启发式筛查，需人工确认；命中即应把这几个词条从词典撤回。
+    因此 itemText(i) 拿到的就是中文；脚本若把它当逻辑常量比较，功能必然失效。
+
+    误报控制：只关联三件事——
+      1) 哪些变量声明成了下拉框（`x = new ComboBox(`）；
+      2) 该下拉框装了哪些字面量（addItem("a") / insertItem(i,"a") /
+         addItem(ARR[i])，ARR 为字面量数组）；
+      3) 该下拉框的文本是否被读回（`x.itemText(`，或 `x.onItemSelected`
+         回调里出现 `itemText(`）。
+    三者同时成立、且字面量命中词典，才算一处回读冲突。用索引取值
+    （`engine.x = itemIndex`）的控件不会被报出。
     """
     try:
         src = open(path, 'r', encoding='utf-8', errors='replace').read()
@@ -146,13 +152,39 @@ def scan_readback(path, keys):
         return []
     if 'itemText(' not in src:
         return []
+
+    lines = [l.split('//')[0] for l in src.splitlines()]
+    combos, arrays, readback = set(), {}, set()
+
+    for idx, code in enumerate(lines):
+        m = re.search(r'([A-Za-z_][\w]*)\s*=\s*new\s+ComboBox', code)
+        if m:
+            combos.add(m.group(1))
+        m = re.search(r'([A-Za-z_][\w]*)\s*=\s*\[\s*"', code)
+        if m:
+            arrays[m.group(1)] = [unescape(x) for x in LIT.findall(code)]
+        m = re.search(r'([A-Za-z_][\w]*)\.itemText\s*\(', code)
+        if m:
+            readback.add(m.group(1))
+        m = re.search(r'([A-Za-z_][\w]*)\.onItemSelected\s*=', code)
+        if m:
+            for nxt in lines[idx:idx + 12]:
+                if 'itemText(' in nxt:
+                    readback.add(m.group(1))
+                    break
+
+    if not readback:
+        return []
+
     hits = []
-    for i, line in enumerate(src.splitlines(), 1):
-        code = line.split('//')[0]
-        if not re.search(r'addItem\s*\(|addItems\s*\(|=\s*\[\s*"', code):
+    for i, code in enumerate(lines, 1):
+        m = re.search(r'([A-Za-z_][\w]*)\.(?:addItem|insertItem|addItems|setItemText)\s*\(', code)
+        if not m or m.group(1) not in readback:
             continue
-        for m in LIT.finditer(code):
-            s = unescape(m.group(1))
+        lits = [unescape(x) for x in LIT.findall(code)]
+        for arr in re.findall(r'([A-Za-z_][\w]*)\s*\[', code):
+            lits.extend(arrays.get(arr, []))
+        for s in lits:
             if 2 <= len(s) <= 60 and re.search(r'[A-Za-z]', s) and s in keys:
                 hits.append((i, s))
     return hits
